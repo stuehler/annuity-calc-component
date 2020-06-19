@@ -1,0 +1,27 @@
+<div id="container">
+	<app-investor-details
+		[balance]="investor.balance"
+		[salary]="investor.salary"
+		[savingsPercent]="investor.savingsPercent"
+		[age]="investor.age"
+		[yearsUntilRetirement]="investor.yearsUntilRetirement"
+		[matchType]="investor.matchType"
+		[annuitizedPercent]="investor.annuitizedPercent"
+		[disabled]="simulationRunning || (!configLoaded)"
+		[progress]="simulationProgress"
+		(investorDetailChanged)="onInvestorDetailChanged($event)"
+		(simulateButtonClicked)="onSimulateButtonClicked($event)">
+	</app-investor-details>
+	<div *ngIf="this.simulationComplete === true">
+		<h2>Results:</h2>
+		<app-histogram
+			[medianAnnualRetirementIncome]="simulationResults.medianAnnualRetirementIncome"
+			[medianAnnualRetirementIncomeWithDia]="simulationResults.medianAnnualRetirementIncomeWithDia"
+			[annualRetirementIncomeHistogram]="simulationResults.annualRetirementIncomeHistogram"
+			[annualRetirementIncomeWithDiaHistogram]="simulationResults.annualRetirementIncomeWithDiaHistogram"
+			[minAnnualRetirementIncome]="simulationResults.minAnnualRetirementIncome"
+			[maxAnnualRetirementIncome]="simulationResults.maxAnnualRetirementIncome"
+			[bins]="simulationResults.bins">
+		</app-histogram>
+	</div>
+</div>

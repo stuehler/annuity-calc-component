@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  servicesUrl: 'https://annuity-calc.s3.amazonaws.com'
 };

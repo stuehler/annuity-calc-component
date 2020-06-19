@@ -1,0 +1,4 @@
+<div id="container">
+	<div id="fill" [style.width.%]="progress"></div>
+	<button #button (click)="onButtonClicked()" type="button" [disabled]="disabled"><ng-content></ng-content></button>
+</div>

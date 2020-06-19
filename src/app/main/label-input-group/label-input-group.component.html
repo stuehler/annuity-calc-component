@@ -1,0 +1,12 @@
+<div class="label-input-group">
+  <label>{{label}}</label>
+  <input 
+	  #input 
+	  (blur)="onInputBlur(input)" 
+	  (focus)="onInputFocus(input)"
+	  (keyup.enter)="onEnterKey(input)" 
+	  value={{_formattedValue}}
+	  type="text"
+	  placeholder={{placeholder}} 
+	  attr.maxlength={{maxlength}}>
+</div>

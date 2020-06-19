@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  servicesUrl: 'https://annuity-calc.s3.amazonaws.com'
 };
 
 /*
