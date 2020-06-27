@@ -99,9 +99,15 @@ export interface SimulationResults {
 	annualRetirementIncomeWithDiaHistogram: number[];
 	duration: number;
 	bins: number;
+	annualRetirementIncomeCdf: number[];
+	annualRetirementIncomeWithDiaCdf: number[];
 }
 export interface WorkerMessage {
 	message: string;
 	progress?: number;
 	simulationResults?: SimulationResults;
+}
+export interface Point {
+	x: number;
+	y: number;
 }

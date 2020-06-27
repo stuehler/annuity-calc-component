@@ -24,6 +24,10 @@ export class DataService {
   }
 
   public getConfiguration(): Observable<Configuration> {
-    return this.httpClient.get<Configuration>(`${this.servicesUrl}/annuityCalcConfig.json`, this.httpOptions);
+    if (window.location.href.includes("http://localhost:")) {
+      return this.httpClient.get<Configuration>(`assets/data/annuityCalcConfig.json`, this.httpOptions);
+    } else {
+      return this.httpClient.get<Configuration>(`${this.servicesUrl}/annuityCalcConfig.json`, this.httpOptions);
+    }
   }
 }

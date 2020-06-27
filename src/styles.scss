@@ -13,35 +13,17 @@
   --normal-border-radius: 0.25rem;
 }
 
-html {
+annuity-calc {
   box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
+annuity-calc *,
+annuity-calc *:before,
+annuity-calc *:after {
   box-sizing: inherit;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-html,
-body {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-html {
+annuity-calc  {
   font-family: var(--primary-font), "Helvetica Neue", sans-serif;
   font-weight: var(--normal-font-weight);
   font-style: normal;
@@ -51,139 +33,38 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-p,
-label {
+annuity-calc p,
+annuity-calc label {
   font-size: var(--normal-font-size);
 }
 
-input[type="text"],
-input[type="search"],
-button {
+annuity-calc input[type="text"],
+annuity-calc button {
   font: inherit;
   font-size: var(--normal-font-size);
   appearance: none;
-  border-radius: var(--normal-border-radius);
 }
 
-input[type="search"],
-input[type="text"] {
-  border: 1px solid var(--light-gray);
-  background-color: white;
-  padding: 0.25rem 0.5rem;
-}
+// annuity-calc input[type="text"] {
+//   border: 1px solid var(--light-gray);
+//   background-color: white;
+//   padding: 0.25rem 0.5rem;
+// }
 
-button {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 0.5rem 2rem;
-  border: none;
-  cursor: pointer;
-}
-
-select {
-  font: inherit;
-  font-size: var(--normal-font-size);
-  border: 1px solid var(--light-gray);
-  border-radius: var(--normal-border-radius);
-  padding: 0.25rem 2rem 0.25rem 1rem;
-  color: var(--primary-font-color);
-  background-color: white;
-  background-position: right 0.5rem center;
-  background-repeat: no-repeat;
-  background-size: 1rem 0.5rem;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='8' fill='none' stroke='%2398A9BC' stroke-width='2' %3E%3Cpath d='M2,1 L8,7 L14,1'/%3E%3C/svg%3E");
-  appearance: none;
-}
-
-button:focus,
-input:focus,
-select:focus {
-  outline: none;
-}
-
-button:disabled {
-  background-color: var(--light-gray);
-  cursor: auto;
-}
-
-
-/*
-
-========================================================================================================
-
-Fonts
-
-========================================================================================================
-
-*/
-
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 100;
-  src: local('Lato Hairline Italic'), local('Lato-HairlineItalic'), url(./assets/fonts/Lato-Hairline-Italic.woff) format('woff'), url(./assets/fonts/Lato-Hairline-Italic.woff2) format('woff2'), url(./assets/fonts/Lato-Hairline-Italic.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 300;
-  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(./assets/fonts/Lato-Light-Italic.woff) format('woff'), url(./assets/fonts/Lato-Light-Italic.woff2) format('woff2'), url(./assets/fonts/Lato-Light-Italic.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(./assets/fonts/Lato-Italic.woff) format('woff'), url(./assets/fonts/Lato-Italic.woff2) format('woff2'), url(./assets/fonts/Lato-Italic.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(./assets/fonts/Lato-Bold-Italic.woff) format('woff'), url(./assets/fonts/Lato-Bold-Italic.woff2) format('woff2'), url(./assets/fonts/Lato-Bold-Italic.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 900;
-  src: local('Lato Black Italic'), local('Lato-BlackItalic'), url(./assets/fonts/Lato-Black-Italic.woff) format('woff'), url(./assets/fonts/Lato-Black-Italic.woff2) format('woff2'), url(./assets/fonts/Lato-Black-Italic.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 100;
-  src: local('Lato Hairline'), local('Lato-Hairline'), url(./assets/fonts/Lato-Hairline.woff) format('woff'), url(./assets/fonts/Lato-Hairline.woff2) format('woff2'), url(./assets/fonts/Lato-Hairline.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(./assets/fonts/Lato-Light.woff) format('woff'), url(./assets/fonts/Lato-Light.woff2) format('woff2'), url(./assets/fonts/Lato-Light.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./assets/fonts/Lato-Regular.eot);
-  src: local('Lato Regular'), local('Lato-Regular'), local('Lato'), url(./assets/fonts/Lato-Regular.woff) format('woff'), url(./assets/fonts/Lato-Regular.svg#Lato) format('svg'), url(./assets/fonts/Lato-Regular.eot?#iefix) format('embedded-opentype'), url(./assets/fonts/Lato-Regular.woff2) format('woff2'), url(./assets/fonts/Lato-Regular.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(./assets/fonts/Lato-Bold.woff) format('woff'), url(./assets/fonts/Lato-Bold.woff2) format('woff2'), url(./assets/fonts/Lato-Bold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 900;
-  src: local('Lato Black'), local('Lato-Black'), url(./assets/fonts/Lato-Black.woff) format('woff'), url(./assets/fonts/Lato-Black.woff2) format('woff2'), url(./assets/fonts/Lato-Black.ttf) format('truetype');
-}
+// annuity-calc select {
+//   font: inherit;
+//   font-size: var(--normal-font-size);
+//   border: 1px solid var(--light-gray);
+//   border-radius: var(--normal-border-radius);
+//   padding: 0.25rem 2rem 0.25rem 1rem;
+//   color: var(--primary-font-color);
+//   background-color: white;
+//   background-position: right 0.5rem center;
+//   background-repeat: no-repeat;
+//   background-size: 1rem 0.5rem;
+//   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='8' fill='none' stroke='%2398A9BC' stroke-width='2' %3E%3Cpath d='M2,1 L8,7 L14,1'/%3E%3C/svg%3E");
+//   appearance: none;
+// }
+// annuity-calc select:focus {
+//   outline: none;
+// }

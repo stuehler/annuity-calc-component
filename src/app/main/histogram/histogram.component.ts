@@ -1,8 +1,10 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { createSplinePathFromPoints } from '../../utils/spline';
-import { easeInOutQuad, formatCurrency, formatNumber } from '../../utils/utils';
+import { easeInOutQuad, formatCurrency, formatNumber, intersect } from '../../utils/utils';
+import { Point } from '../../model/model';
 
 const ANIMATION_DURATION = 700;
+
 
 @Component({
   selector: 'app-histogram',
@@ -45,14 +47,6 @@ export class HistogramComponent implements OnInit {
   constructor() { }
 
   ngOnChanges() {
-
-    // console.log("ngOnChanges!");
-    // console.log("medianAnnualRetirementIncome: " + this.medianAnnualRetirementIncome);
-    // console.log("medianAnnualRetirementIncomeWithDia: " + this.medianAnnualRetirementIncomeWithDia);
-    // console.log("annualRetirementIncomeHistogram: " + this.annualRetirementIncomeHistogram.join(", "));
-    // console.log("annualRetirementIncomeWithDiaHistogram: " + this.annualRetirementIncomeWithDiaHistogram.join(", "));
-    // console.log("minAnnualRetirementIncome: " + this.minAnnualRetirementIncome);
-    // console.log("maxAnnualRetirementIncome: " + this.maxAnnualRetirementIncome);
 
     if ((this.annualRetirementIncomeWithDiaHistogram === undefined) || (this.annualRetirementIncomeHistogram === undefined) || (this.bins === undefined)) {
       console.log("Error: missing data!")
@@ -162,7 +156,7 @@ export class HistogramComponent implements OnInit {
     const xAxisHeight = 25;
     const calloutsHeight = 40;
     const chartTop = padding + calloutsHeight;
-    const yAxisWidth = 0;
+    const yAxisWidth = 20;
     const chartLeft = padding + yAxisWidth;
 
     const chartWidth = this._svgWidth - padding * 2 - yAxisWidth;
@@ -171,11 +165,15 @@ export class HistogramComponent implements OnInit {
     const tickmarkHeight = 7;
 
     let
-      value,
-      x,
-      y,
-      labels,
-      bin;
+      value: number,
+      x: number,
+      y: number,
+      x1: number, x2: number, x3: number, x4: number,
+      y1: number, y2: number, y3: number, y4: number,
+      labels: number,
+      intersection: Point,
+      bin: number,
+      d: string;
 
     const pointsForRetirementIncomeWithDiaCurve = [];
     const pointsForRetirementIncomeCurve = [];
@@ -183,23 +181,46 @@ export class HistogramComponent implements OnInit {
     for (bin = 0; bin < bins; bin++) {
 
       value = annualRetirementIncomeWithDiaHistogram[bin];
-      x = this.getXForBin(bin, chartLeft, chartWidth, bins);
-      y = this.getY(value, chartTop, chartHeight, maxValue);
-      pointsForRetirementIncomeWithDiaCurve.push([x, y]);
+      x1 = this.getXForBin(bin, chartLeft, chartWidth, bins);
+      y1 = this.getY(value, chartTop, chartHeight, maxValue);
+      pointsForRetirementIncomeWithDiaCurve.push([x1, y1]);
 
       value = annualRetirementIncomeHistogram[bin];
-      y = this.getY(value, chartTop, chartHeight, maxValue);
-      pointsForRetirementIncomeCurve.push([x, y]);
+      x3 = x1;
+      y3 = this.getY(value, chartTop, chartHeight, maxValue);
+      pointsForRetirementIncomeCurve.push([x3, y3]);
+
+      if ((intersection === undefined) && (annualRetirementIncomeWithDiaHistogram[bin] >= annualRetirementIncomeHistogram[bin]) && (annualRetirementIncomeWithDiaHistogram[bin + 1] <= annualRetirementIncomeHistogram[bin + 1])) {
+
+        value = annualRetirementIncomeWithDiaHistogram[bin + 1];
+        x2 = this.getXForBin(bin + 1, chartLeft, chartWidth, bins);
+        y2 = this.getY(value, chartTop, chartHeight, maxValue);
+  
+        value = annualRetirementIncomeHistogram[bin + 1];
+        x4 = x2;
+        y4 = this.getY(value, chartTop, chartHeight, maxValue);
+
+        intersection = intersect(x1, y1, x2, y2, x3, y3, x4, y4);
+  
+      }
+
 
     }
 
     // close spline;
     x = this.getXForBin(bins - 1, chartLeft, chartWidth, bins);
     y = this.getY(0, chartTop, chartHeight, maxValue);
-    let closeSpline = ` L${x},${y} L${this.getXForBin(0, chartLeft, chartWidth, bins)},${y} z`
+    const closeSpline = ` L${x},${y} L${this.getXForBin(0, chartLeft, chartWidth, bins)},${y} z`;
 
-    const retirementIncomeWithDiaSpline = createSplinePathFromPoints(pointsForRetirementIncomeWithDiaCurve) + closeSpline;
+    // enclose the area above the spline
+    const inverseCloseSpline = ` L${x},${y} L${chartLeft + chartWidth},${chartTop + chartHeight} v${-chartHeight} h${-chartWidth} v${chartHeight} L${this.getXForBin(0, chartLeft, chartWidth, bins)},${y} z`;
+
+    const spline = createSplinePathFromPoints(pointsForRetirementIncomeWithDiaCurve);
+
+    const retirementIncomeWithDiaSpline = spline + closeSpline;
     const retirementIncomeSpline = createSplinePathFromPoints(pointsForRetirementIncomeCurve) + closeSpline
+
+    const inverseRetirementIncomeWithDiaSpline = spline + inverseCloseSpline;
 
     // x-axis labels and tickmarks
 
@@ -254,6 +275,60 @@ export class HistogramComponent implements OnInit {
       value: formatCurrency(this.medianAnnualRetirementIncome)
     }
 
+    // mask properties
+
+    x = this.getXForValue(this.medianAnnualRetirementIncomeWithDia, chartLeft, chartWidth, minAnnualRetirementIncome, maxAnnualRetirementIncome);
+
+    const maskProps = {
+      x: x,
+      width: (chartLeft + chartWidth - x)
+    }
+
+    // y-axis label
+
+    x = padding;
+    y = chartTop + chartHeight;
+
+    const lowerYAxisLabel = {
+      x: x,
+      y: y,
+      transform: `rotate(-90,${x},${y})`
+    }
+
+    y = chartTop;
+
+    const upperYAxisLabel = {
+      x: x,
+      y: y,
+      transform: `rotate(-90,${x},${y})`
+    }
+
+    x1 = this.halfPixelOffset(padding + 10);
+    y1 = this.halfPixelOffset(chartTop);
+    x2 = x1;
+    y2 = chartTop + chartHeight;
+
+    const arrowLength = 8;
+    const arrowWidth = 4;
+
+    const yAxisD = `M${x1},${y1} L${x1 - arrowWidth},${y1 + arrowLength} M${x1},${y1} L${x1 + arrowWidth},${y1 + arrowLength} M${x1},${y1} L${x2},${y2} L${x2 - arrowWidth},${y2 - arrowLength} M${x2},${y2} L${x2 + arrowWidth},${y2 - arrowLength}`;
+
+    // forgone upside callout
+
+    if (intersection !== undefined) {
+      x1 = this.halfPixelOffset(intersection.x + 10);
+      x2 = this.halfPixelOffset(this.getXForBin(bins - 1, chartLeft, chartWidth, bins) - 10);
+      // x2 = this.halfPixelOffset(this.getXForValue(this.maxResultWithoutLoan, chartLeft, chartWidth, minResult, maxResult));
+      y = intersection.y - 10;
+      d = `M${x1},${y} v-10 H${x2} v10`;
+    }
+    const potentialUpside = {
+      x: (x1 + x2) / 2,
+      y: y - 20,
+      d: d,
+    }
+
+
     // y-axis values 
 
     // const yAxisLabels = [];
@@ -270,11 +345,16 @@ export class HistogramComponent implements OnInit {
     return {
       retirementIncomeWithDiaSpline: retirementIncomeWithDiaSpline,
       retirementIncomeSpline: retirementIncomeSpline,
+      inverseRetirementIncomeWithDiaSpline: inverseRetirementIncomeWithDiaSpline,
       xAxisLabels: xAxisLabels,
       xAxisTickmarks: xAxisTickmarks,
-      // yAxisLabels: yAxisLabels,
       retirementIncomeWithDiaCallout: retirementIncomeWithDiaCallout,
-      retirementIncomeCallout: retirementIncomeCallout
+      retirementIncomeCallout: retirementIncomeCallout,
+      maskProps: maskProps,
+      lowerYAxisLabel: lowerYAxisLabel,
+      upperYAxisLabel: upperYAxisLabel,
+      yAxisD: yAxisD,
+      potentialUpside: potentialUpside
     }
 
   }
@@ -284,7 +364,8 @@ export class HistogramComponent implements OnInit {
     return Math.pow(10, order);
   }
   getXForBin(bin: number, chartLeftX: number, chartWidth: number, bins: number): number {
-    return chartLeftX + (bin + 0.5) * (chartWidth / bins);
+    // return chartLeftX + (bin + 0.5) * (chartWidth / bins);
+    return chartLeftX + bin * (chartWidth / (bins - 1));
   }
   getXForValue(value: number, chartLeftX: number, chartWidth: number, minAnnualRetirementIncome: number, maxAnnualRetirementIncome: number): number {
     return chartLeftX + (value - minAnnualRetirementIncome) / (maxAnnualRetirementIncome - minAnnualRetirementIncome) * chartWidth;

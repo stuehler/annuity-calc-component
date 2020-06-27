@@ -9,6 +9,7 @@ import { InvestorDetailsComponent } from './main/investor-details/investor-detai
 import { LabelInputGroupComponent } from './main/label-input-group/label-input-group.component';
 import { HistogramComponent } from './main/histogram/histogram.component';
 import { ProgressButtonComponent } from './progress-button/progress-button.component';
+import { CdfChartComponent } from './main/cdf-chart/cdf-chart.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,16 @@ import { ProgressButtonComponent } from './progress-button/progress-button.compo
     InvestorDetailsComponent,
     LabelInputGroupComponent,
     HistogramComponent,
-    ProgressButtonComponent
+    ProgressButtonComponent,
+    CdfChartComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
   providers: [],
-  entryComponents: [AppComponent]
+  entryComponents: [AppComponent],
+  // bootstrap: [AppComponent]
 })
 export class AppModule implements DoBootstrap {
 

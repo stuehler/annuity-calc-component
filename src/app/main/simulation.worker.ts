@@ -6,9 +6,10 @@ import * as F from '../utils/financial';
 
 import { quickSort, round, calculateMedian } from '../utils/utils';
 
-const TRIALS: number = 100000;
+const TRIALS: number = 10000;
 const BINS: number = 50;
 const LIFE_EXPECTANCY_THRESHOLD: number = 0.75
+const OUTLIERS = 0.95;
 
 const ASSUMPTIONS: Assumptions = {
 	inflation: null,
@@ -56,10 +57,6 @@ function loadConfig(config: Configuration) {
 	ASSUMPTIONS.inflation = config.configuration.inflation;
 	ASSUMPTIONS.salaryGrowthRate = config.configuration.salaryGrowthRate;
 	ASSUMPTIONS.annuityInterestRate = config.configuration.annuityInterestRate;
-
-	console.log("ASSUMPTIONS.inflation: " + ASSUMPTIONS.inflation);
-	console.log("ASSUMPTIONS.salaryGrowthRate: " + ASSUMPTIONS.salaryGrowthRate);
-	console.log("ASSUMPTIONS.annuityInterestRate: " + ASSUMPTIONS.annuityInterestRate);
 
 	ASSUMPTIONS.assetClasses = parseAssetClasses(config.configuration.assetClasses);
 
@@ -229,7 +226,6 @@ function runSimulation(investor: Investor) {
 
 	let
 		i: number,
-		index: number,
 		trial: number,
 		startTime: number,
 		yearsUntilRetirement: number,
@@ -254,8 +250,12 @@ function runSimulation(investor: Investor) {
 		pvOfDiaPayments: number,
 		totalMonthlyIncomeFromDIA: number,
 		lifeExpectancy: number,
-		trials: number[],
-		trialsWithDia: number[];
+		trialsWithoutDia: number[],
+		trialsWithDia: number[],
+		income: number,
+		bin: number,
+		annualRetirementIncomeIndex: number,
+		annualRetirementIncomeWithDiaIndex: number;
 
 	startTime = performance.now();
 
@@ -310,7 +310,7 @@ function runSimulation(investor: Investor) {
 
 	console.log("Annual income from DIA: " + (totalMonthlyIncomeFromDIA * 12));
 
-	trials = [];
+	trialsWithoutDia = [];
 	trialsWithDia = [];
 
 	for (trial = 0; trial < TRIALS; trial++) {
@@ -357,7 +357,7 @@ function runSimulation(investor: Investor) {
 
 		annualRetirementIncome = totalSpendingPV / yearsInRetirement;
 
-		trials.push(annualRetirementIncome + random);
+		trialsWithoutDia.push(annualRetirementIncome + random);
 
 		random = ((Math.random() - 0.5) / 10000);
 
@@ -372,41 +372,93 @@ function runSimulation(investor: Investor) {
 
 	}
 
-	let s0 = performance.now();
-
-	quickSort(trials, 0, TRIALS - 1, TRIALS);
+	quickSort(trialsWithoutDia, 0, TRIALS - 1, TRIALS);
 	quickSort(trialsWithDia, 0, TRIALS - 1, TRIALS);
 
+	// Trim outliers
+
 	const lowerIndex = 0;
-	const upperIndex = Math.floor(TRIALS * 0.95);
+	const upperIndex = Math.floor(TRIALS * OUTLIERS);
 
-	const minAnnualRetirementIncome: number = Math.min(trials[lowerIndex], trialsWithDia[lowerIndex]);
-	const maxAnnualRetirementIncome: number = Math.max(trials[upperIndex], trialsWithDia[upperIndex]);
+	trialsWithoutDia.splice(upperIndex);
+	trialsWithDia.splice(upperIndex);
+
+	const retainedTrials = trialsWithoutDia.length;
+
+
+	// Median results
+
+	const medianAnnualRetirementIncome = calculateMedian(trialsWithoutDia);
+	const medianAnnualRetirementIncomeWithDia = calculateMedian(trialsWithDia);
+
+
+	const minAnnualRetirementIncome: number = Math.min(trialsWithoutDia[lowerIndex], trialsWithDia[lowerIndex]);
+	const maxAnnualRetirementIncome: number = Math.max(trialsWithoutDia[retainedTrials - 1], trialsWithDia[retainedTrials - 1]);
 	const range: number = maxAnnualRetirementIncome - minAnnualRetirementIncome;
-	// const bins: number = BINS;
+	const increment = range / (BINS - 1);
 
-	// console.log("minAnnualRetirementIncome: " + minAnnualRetirementIncome);
-	// console.log("minRemaxAnnualRetirementIncomesult: " + maxAnnualRetirementIncome);
+	console.log("minAnnualRetirementIncome: " + minAnnualRetirementIncome);
+	console.log("minRemaxAnnualRetirementIncomesult: " + maxAnnualRetirementIncome);
+
+	for (i = 9000; i < retainedTrials; i++) {
+		console.log(i, trialsWithDia[i]);
+	}
+
+
+	// Historgram
 
 	const annualRetirementIncomeHistogram: number[] = Array(BINS).fill(0);
 	const annualRetirementIncomeWithDiaHistogram: number[] = Array(BINS).fill(0);
 
 	for (i = lowerIndex; i <= upperIndex; i++) {
-		index = Math.min(BINS - 1, Math.floor(((trials[i] - minAnnualRetirementIncome) / range) * BINS));
-		annualRetirementIncomeHistogram[index]++;
+		bin = Math.floor((trialsWithoutDia[i] - minAnnualRetirementIncome) / increment);
+		annualRetirementIncomeHistogram[bin]++;
 
-		index = Math.min(BINS - 1, Math.floor(((trialsWithDia[i] - minAnnualRetirementIncome) / range) * BINS));
-		annualRetirementIncomeWithDiaHistogram[index]++;
+		bin = Math.floor((trialsWithDia[i] - minAnnualRetirementIncome) / increment);
+		annualRetirementIncomeWithDiaHistogram[bin]++;
+	}
+
+	for (i = 0; i < BINS; i ++) { 
+	  console.log(i, minAnnualRetirementIncome + i * increment, annualRetirementIncomeHistogram[i], annualRetirementIncomeWithDiaHistogram[i]);
+	}
+
+
+	// CDF
+
+	const annualRetirementIncomeCdf: number[] = Array(BINS).fill(0);
+	const annualRetirementIncomeWithDiaCdf: number[] = Array(BINS).fill(0);
+
+	const incrmemnt = (maxAnnualRetirementIncome - minAnnualRetirementIncome) / (BINS - 1);
+
+	annualRetirementIncomeIndex = 0;
+	annualRetirementIncomeWithDiaIndex = 0;
+
+	console.log("\n\nCDF");
+
+	for (i = 0; i < BINS - 1; i ++) {
+		income = minAnnualRetirementIncome + i * incrmemnt;
+		while (trialsWithoutDia[annualRetirementIncomeIndex] < income) {
+			annualRetirementIncomeIndex ++;
+		}
+		annualRetirementIncomeCdf[i] = (retainedTrials - annualRetirementIncomeIndex) / retainedTrials;
+
+		while (trialsWithDia[annualRetirementIncomeWithDiaIndex] < income) {
+			annualRetirementIncomeWithDiaIndex ++;
+		}
+
+		let below1 = below(trialsWithDia, income);
+		console.log("income: " + income + " annualRetirementIncomeWithDiaIndex: " + annualRetirementIncomeWithDiaIndex + " below1: " + below1);
+
+		annualRetirementIncomeWithDiaCdf[i] = (retainedTrials - annualRetirementIncomeWithDiaIndex) / retainedTrials;
 
 	}
 
-	// for (i = 0; i < BINS; i ++) { 
-	//   console.log(i, minAnnualRetirementIncome + i * binRange, annualRetirementIncomeHistogram[i], annualRetirementIncomeWithDiaHistogram[i]);
-	// }
 
+	for (i = 0; i < BINS - 1; i ++) {
+		income = (minAnnualRetirementIncome + i * incrmemnt);
+		console.log("income: " + income + " annualRetirementIncomeCdf[i]: " + annualRetirementIncomeCdf[i] + " annualRetirementIncomeWithDiaCdf[i]: " + annualRetirementIncomeWithDiaCdf[i]);
+	}
 
-	const medianAnnualRetirementIncome = calculateMedian(trials);
-	const medianAnnualRetirementIncomeWithDia = calculateMedian(trialsWithDia);
 
 	const simulationResults: SimulationResults = {
 		medianAnnualRetirementIncome: medianAnnualRetirementIncome,
@@ -416,11 +468,22 @@ function runSimulation(investor: Investor) {
 		annualRetirementIncomeHistogram: annualRetirementIncomeHistogram,
 		annualRetirementIncomeWithDiaHistogram: annualRetirementIncomeWithDiaHistogram,
 		duration: (performance.now() - startTime),
-		bins: BINS
+		bins: BINS,
+		annualRetirementIncomeCdf: annualRetirementIncomeCdf,
+		annualRetirementIncomeWithDiaCdf: annualRetirementIncomeWithDiaCdf
 	}
 
 	postWorkerMessage("simulation complete", undefined, simulationResults);
 
+}
+function below(array: number[], value: number): number {
+	let below = 0;
+	for (let i = 0, l = array.length; i < l; i ++) {
+		if (array[i] < value) {
+			below ++;
+		}
+	}
+	return below;
 }
 function postWorkerMessage(message, progress?: number, simulationResults?: SimulationResults) {
 	const workerMessage: WorkerMessage = {

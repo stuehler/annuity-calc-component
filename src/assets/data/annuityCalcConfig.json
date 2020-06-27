@@ -1,0 +1,2659 @@
+{
+  "configuration": {
+    "inflation": 0.02,
+    "salaryGrowthRate": 0.03,
+    "annuityInterestRate": 0.03,
+    "mortality": [
+      {
+        "age": 18,
+        "maleDeathProbability": 0.000851,
+        "maleLifeExpectancy": 58.81,
+        "femaleDeathProbability": 0.000342,
+        "femaleLifeExpectancy": 63.63
+      },
+      {
+        "age": 19,
+        "maleDeathProbability": 0.001007,
+        "maleLifeExpectancy": 57.86,
+        "femaleDeathProbability": 0.000381,
+        "femaleLifeExpectancy": 62.66
+      },
+      {
+        "age": 20,
+        "maleDeathProbability": 0.001173,
+        "maleLifeExpectancy": 56.91,
+        "femaleDeathProbability": 0.000423,
+        "femaleLifeExpectancy": 61.68
+      },
+      {
+        "age": 21,
+        "maleDeathProbability": 0.001331,
+        "maleLifeExpectancy": 55.98,
+        "femaleDeathProbability": 0.000466,
+        "femaleLifeExpectancy": 60.71
+      },
+      {
+        "age": 22,
+        "maleDeathProbability": 0.001455,
+        "maleLifeExpectancy": 55.05,
+        "femaleDeathProbability": 0.000505,
+        "femaleLifeExpectancy": 59.73
+      },
+      {
+        "age": 23,
+        "maleDeathProbability": 0.001531,
+        "maleLifeExpectancy": 54.13,
+        "femaleDeathProbability": 0.000539,
+        "femaleLifeExpectancy": 58.76
+      },
+      {
+        "age": 24,
+        "maleDeathProbability": 0.001572,
+        "maleLifeExpectancy": 53.22,
+        "femaleDeathProbability": 0.000568,
+        "femaleLifeExpectancy": 57.8
+      },
+      {
+        "age": 25,
+        "maleDeathProbability": 0.001602,
+        "maleLifeExpectancy": 52.3,
+        "femaleDeathProbability": 0.000598,
+        "femaleLifeExpectancy": 56.83
+      },
+      {
+        "age": 26,
+        "maleDeathProbability": 0.001635,
+        "maleLifeExpectancy": 51.38,
+        "femaleDeathProbability": 0.00063,
+        "femaleLifeExpectancy": 55.86
+      },
+      {
+        "age": 27,
+        "maleDeathProbability": 0.001669,
+        "maleLifeExpectancy": 50.47,
+        "femaleDeathProbability": 0.000666,
+        "femaleLifeExpectancy": 54.9
+      },
+      {
+        "age": 28,
+        "maleDeathProbability": 0.001708,
+        "maleLifeExpectancy": 49.55,
+        "femaleDeathProbability": 0.000707,
+        "femaleLifeExpectancy": 53.93
+      },
+      {
+        "age": 29,
+        "maleDeathProbability": 0.001752,
+        "maleLifeExpectancy": 48.63,
+        "femaleDeathProbability": 0.000753,
+        "femaleLifeExpectancy": 52.97
+      },
+      {
+        "age": 30,
+        "maleDeathProbability": 0.001794,
+        "maleLifeExpectancy": 47.72,
+        "femaleDeathProbability": 0.000803,
+        "femaleLifeExpectancy": 52.01
+      },
+      {
+        "age": 31,
+        "maleDeathProbability": 0.001835,
+        "maleLifeExpectancy": 46.8,
+        "femaleDeathProbability": 0.000853,
+        "femaleLifeExpectancy": 51.05
+      },
+      {
+        "age": 32,
+        "maleDeathProbability": 0.00188,
+        "maleLifeExpectancy": 45.89,
+        "femaleDeathProbability": 0.000905,
+        "femaleLifeExpectancy": 50.09
+      },
+      {
+        "age": 33,
+        "maleDeathProbability": 0.00193,
+        "maleLifeExpectancy": 44.97,
+        "femaleDeathProbability": 0.000956,
+        "femaleLifeExpectancy": 49.14
+      },
+      {
+        "age": 34,
+        "maleDeathProbability": 0.001986,
+        "maleLifeExpectancy": 44.06,
+        "femaleDeathProbability": 0.001009,
+        "femaleLifeExpectancy": 48.19
+      },
+      {
+        "age": 35,
+        "maleDeathProbability": 0.002052,
+        "maleLifeExpectancy": 43.15,
+        "femaleDeathProbability": 0.001069,
+        "femaleLifeExpectancy": 47.23
+      },
+      {
+        "age": 36,
+        "maleDeathProbability": 0.002125,
+        "maleLifeExpectancy": 42.23,
+        "femaleDeathProbability": 0.001134,
+        "femaleLifeExpectancy": 46.28
+      },
+      {
+        "age": 37,
+        "maleDeathProbability": 0.002196,
+        "maleLifeExpectancy": 41.32,
+        "femaleDeathProbability": 0.001199,
+        "femaleLifeExpectancy": 45.34
+      },
+      {
+        "age": 38,
+        "maleDeathProbability": 0.002264,
+        "maleLifeExpectancy": 40.41,
+        "femaleDeathProbability": 0.001263,
+        "femaleLifeExpectancy": 44.39
+      },
+      {
+        "age": 39,
+        "maleDeathProbability": 0.002334,
+        "maleLifeExpectancy": 39.5,
+        "femaleDeathProbability": 0.001329,
+        "femaleLifeExpectancy": 43.45
+      },
+      {
+        "age": 40,
+        "maleDeathProbability": 0.00242,
+        "maleLifeExpectancy": 38.59,
+        "femaleDeathProbability": 0.001403,
+        "femaleLifeExpectancy": 42.5
+      },
+      {
+        "age": 41,
+        "maleDeathProbability": 0.00253,
+        "maleLifeExpectancy": 37.69,
+        "femaleDeathProbability": 0.001491,
+        "femaleLifeExpectancy": 41.56
+      },
+      {
+        "age": 42,
+        "maleDeathProbability": 0.002663,
+        "maleLifeExpectancy": 36.78,
+        "femaleDeathProbability": 0.001597,
+        "femaleLifeExpectancy": 40.62
+      },
+      {
+        "age": 43,
+        "maleDeathProbability": 0.002823,
+        "maleLifeExpectancy": 35.88,
+        "femaleDeathProbability": 0.001724,
+        "femaleLifeExpectancy": 39.69
+      },
+      {
+        "age": 44,
+        "maleDeathProbability": 0.003013,
+        "maleLifeExpectancy": 34.98,
+        "femaleDeathProbability": 0.001871,
+        "femaleLifeExpectancy": 38.76
+      },
+      {
+        "age": 45,
+        "maleDeathProbability": 0.003229,
+        "maleLifeExpectancy": 34.08,
+        "femaleDeathProbability": 0.002033,
+        "femaleLifeExpectancy": 37.83
+      },
+      {
+        "age": 46,
+        "maleDeathProbability": 0.003479,
+        "maleLifeExpectancy": 33.19,
+        "femaleDeathProbability": 0.002212,
+        "femaleLifeExpectancy": 36.9
+      },
+      {
+        "age": 47,
+        "maleDeathProbability": 0.00378,
+        "maleLifeExpectancy": 32.3,
+        "femaleDeathProbability": 0.002417,
+        "femaleLifeExpectancy": 35.98
+      },
+      {
+        "age": 48,
+        "maleDeathProbability": 0.00414,
+        "maleLifeExpectancy": 31.43,
+        "femaleDeathProbability": 0.002651,
+        "femaleLifeExpectancy": 35.07
+      },
+      {
+        "age": 49,
+        "maleDeathProbability": 0.004553,
+        "maleLifeExpectancy": 30.55,
+        "femaleDeathProbability": 0.002911,
+        "femaleLifeExpectancy": 34.16
+      },
+      {
+        "age": 50,
+        "maleDeathProbability": 0.005007,
+        "maleLifeExpectancy": 29.69,
+        "femaleDeathProbability": 0.003193,
+        "femaleLifeExpectancy": 33.26
+      },
+      {
+        "age": 51,
+        "maleDeathProbability": 0.005493,
+        "maleLifeExpectancy": 28.84,
+        "femaleDeathProbability": 0.003492,
+        "femaleLifeExpectancy": 32.36
+      },
+      {
+        "age": 52,
+        "maleDeathProbability": 0.006016,
+        "maleLifeExpectancy": 27.99,
+        "femaleDeathProbability": 0.003803,
+        "femaleLifeExpectancy": 31.48
+      },
+      {
+        "age": 53,
+        "maleDeathProbability": 0.006575,
+        "maleLifeExpectancy": 27.16,
+        "femaleDeathProbability": 0.004126,
+        "femaleLifeExpectancy": 30.59
+      },
+      {
+        "age": 54,
+        "maleDeathProbability": 0.00717,
+        "maleLifeExpectancy": 26.34,
+        "femaleDeathProbability": 0.004462,
+        "femaleLifeExpectancy": 29.72
+      },
+      {
+        "age": 55,
+        "maleDeathProbability": 0.007805,
+        "maleLifeExpectancy": 25.52,
+        "femaleDeathProbability": 0.004829,
+        "femaleLifeExpectancy": 28.85
+      },
+      {
+        "age": 56,
+        "maleDeathProbability": 0.008477,
+        "maleLifeExpectancy": 24.72,
+        "femaleDeathProbability": 0.00522,
+        "femaleLifeExpectancy": 27.99
+      },
+      {
+        "age": 57,
+        "maleDeathProbability": 0.009181,
+        "maleLifeExpectancy": 23.93,
+        "femaleDeathProbability": 0.005612,
+        "femaleLifeExpectancy": 27.13
+      },
+      {
+        "age": 58,
+        "maleDeathProbability": 0.009916,
+        "maleLifeExpectancy": 23.15,
+        "femaleDeathProbability": 0.006,
+        "femaleLifeExpectancy": 26.28
+      },
+      {
+        "age": 59,
+        "maleDeathProbability": 0.010683,
+        "maleLifeExpectancy": 22.37,
+        "femaleDeathProbability": 0.006397,
+        "femaleLifeExpectancy": 25.44
+      },
+      {
+        "age": 60,
+        "maleDeathProbability": 0.011533,
+        "maleLifeExpectancy": 21.61,
+        "femaleDeathProbability": 0.006848,
+        "femaleLifeExpectancy": 24.6
+      },
+      {
+        "age": 61,
+        "maleDeathProbability": 0.012434,
+        "maleLifeExpectancy": 20.85,
+        "femaleDeathProbability": 0.007358,
+        "femaleLifeExpectancy": 23.76
+      },
+      {
+        "age": 62,
+        "maleDeathProbability": 0.013302,
+        "maleLifeExpectancy": 20.11,
+        "femaleDeathProbability": 0.007893,
+        "femaleLifeExpectancy": 22.94
+      },
+      {
+        "age": 63,
+        "maleDeathProbability": 0.014109,
+        "maleLifeExpectancy": 19.37,
+        "femaleDeathProbability": 0.008453,
+        "femaleLifeExpectancy": 22.12
+      },
+      {
+        "age": 64,
+        "maleDeathProbability": 0.014913,
+        "maleLifeExpectancy": 18.65,
+        "femaleDeathProbability": 0.009063,
+        "femaleLifeExpectancy": 21.3
+      },
+      {
+        "age": 65,
+        "maleDeathProbability": 0.015808,
+        "maleLifeExpectancy": 17.92,
+        "femaleDeathProbability": 0.009761,
+        "femaleLifeExpectancy": 20.49
+      },
+      {
+        "age": 66,
+        "maleDeathProbability": 0.016868,
+        "maleLifeExpectancy": 17.2,
+        "femaleDeathProbability": 0.010581,
+        "femaleLifeExpectancy": 19.69
+      },
+      {
+        "age": 67,
+        "maleDeathProbability": 0.018101,
+        "maleLifeExpectancy": 16.49,
+        "femaleDeathProbability": 0.011535,
+        "femaleLifeExpectancy": 18.89
+      },
+      {
+        "age": 68,
+        "maleDeathProbability": 0.019544,
+        "maleLifeExpectancy": 15.78,
+        "femaleDeathProbability": 0.012646,
+        "femaleLifeExpectancy": 18.11
+      },
+      {
+        "age": 69,
+        "maleDeathProbability": 0.021206,
+        "maleLifeExpectancy": 15.09,
+        "femaleDeathProbability": 0.013919,
+        "femaleLifeExpectancy": 17.33
+      },
+      {
+        "age": 70,
+        "maleDeathProbability": 0.023122,
+        "maleLifeExpectancy": 14.4,
+        "femaleDeathProbability": 0.015413,
+        "femaleLifeExpectancy": 16.57
+      },
+      {
+        "age": 71,
+        "maleDeathProbability": 0.025265,
+        "maleLifeExpectancy": 13.73,
+        "femaleDeathProbability": 0.017089,
+        "femaleLifeExpectancy": 15.82
+      },
+      {
+        "age": 72,
+        "maleDeathProbability": 0.027585,
+        "maleLifeExpectancy": 13.07,
+        "femaleDeathProbability": 0.018861,
+        "femaleLifeExpectancy": 15.09
+      },
+      {
+        "age": 73,
+        "maleDeathProbability": 0.03007,
+        "maleLifeExpectancy": 12.43,
+        "femaleDeathProbability": 0.020705,
+        "femaleLifeExpectancy": 14.37
+      },
+      {
+        "age": 74,
+        "maleDeathProbability": 0.032794,
+        "maleLifeExpectancy": 11.8,
+        "femaleDeathProbability": 0.022703,
+        "femaleLifeExpectancy": 13.66
+      },
+      {
+        "age": 75,
+        "maleDeathProbability": 0.035963,
+        "maleLifeExpectancy": 11.18,
+        "femaleDeathProbability": 0.025035,
+        "femaleLifeExpectancy": 12.97
+      },
+      {
+        "age": 76,
+        "maleDeathProbability": 0.039588,
+        "maleLifeExpectancy": 10.58,
+        "femaleDeathProbability": 0.027766,
+        "femaleLifeExpectancy": 12.29
+      },
+      {
+        "age": 77,
+        "maleDeathProbability": 0.043511,
+        "maleLifeExpectancy": 10,
+        "femaleDeathProbability": 0.030822,
+        "femaleLifeExpectancy": 11.62
+      },
+      {
+        "age": 78,
+        "maleDeathProbability": 0.04772,
+        "maleLifeExpectancy": 9.43,
+        "femaleDeathProbability": 0.034227,
+        "femaleLifeExpectancy": 10.98
+      },
+      {
+        "age": 79,
+        "maleDeathProbability": 0.052358,
+        "maleLifeExpectancy": 8.88,
+        "femaleDeathProbability": 0.038062,
+        "femaleLifeExpectancy": 10.35
+      },
+      {
+        "age": 80,
+        "maleDeathProbability": 0.057712,
+        "maleLifeExpectancy": 8.34,
+        "femaleDeathProbability": 0.042539,
+        "femaleLifeExpectancy": 9.74
+      },
+      {
+        "age": 81,
+        "maleDeathProbability": 0.063886,
+        "maleLifeExpectancy": 7.82,
+        "femaleDeathProbability": 0.047663,
+        "femaleLifeExpectancy": 9.15
+      },
+      {
+        "age": 82,
+        "maleDeathProbability": 0.070782,
+        "maleLifeExpectancy": 7.32,
+        "femaleDeathProbability": 0.053278,
+        "femaleLifeExpectancy": 8.58
+      },
+      {
+        "age": 83,
+        "maleDeathProbability": 0.078442,
+        "maleLifeExpectancy": 6.84,
+        "femaleDeathProbability": 0.059378,
+        "femaleLifeExpectancy": 8.04
+      },
+      {
+        "age": 84,
+        "maleDeathProbability": 0.086997,
+        "maleLifeExpectancy": 6.38,
+        "femaleDeathProbability": 0.066132,
+        "femaleLifeExpectancy": 7.51
+      },
+      {
+        "age": 85,
+        "maleDeathProbability": 0.096603,
+        "maleLifeExpectancy": 5.94,
+        "femaleDeathProbability": 0.073763,
+        "femaleLifeExpectancy": 7.01
+      },
+      {
+        "age": 86,
+        "maleDeathProbability": 0.10739,
+        "maleLifeExpectancy": 5.52,
+        "femaleDeathProbability": 0.082465,
+        "femaleLifeExpectancy": 6.53
+      },
+      {
+        "age": 87,
+        "maleDeathProbability": 0.119456,
+        "maleLifeExpectancy": 5.12,
+        "femaleDeathProbability": 0.09237,
+        "femaleLifeExpectancy": 6.07
+      },
+      {
+        "age": 88,
+        "maleDeathProbability": 0.132853,
+        "maleLifeExpectancy": 4.75,
+        "femaleDeathProbability": 0.103546,
+        "femaleLifeExpectancy": 5.64
+      },
+      {
+        "age": 89,
+        "maleDeathProbability": 0.147599,
+        "maleLifeExpectancy": 4.4,
+        "femaleDeathProbability": 0.115997,
+        "femaleLifeExpectancy": 5.23
+      },
+      {
+        "age": 90,
+        "maleDeathProbability": 0.163689,
+        "maleLifeExpectancy": 4.08,
+        "femaleDeathProbability": 0.129706,
+        "femaleLifeExpectancy": 4.85
+      },
+      {
+        "age": 91,
+        "maleDeathProbability": 0.181104,
+        "maleLifeExpectancy": 3.78,
+        "femaleDeathProbability": 0.144636,
+        "femaleLifeExpectancy": 4.5
+      },
+      {
+        "age": 92,
+        "maleDeathProbability": 0.19981,
+        "maleLifeExpectancy": 3.5,
+        "femaleDeathProbability": 0.160741,
+        "femaleLifeExpectancy": 4.18
+      },
+      {
+        "age": 93,
+        "maleDeathProbability": 0.219765,
+        "maleLifeExpectancy": 3.25,
+        "femaleDeathProbability": 0.177971,
+        "femaleLifeExpectancy": 3.88
+      },
+      {
+        "age": 94,
+        "maleDeathProbability": 0.240913,
+        "maleLifeExpectancy": 3.03,
+        "femaleDeathProbability": 0.19627,
+        "femaleLifeExpectancy": 3.61
+      },
+      {
+        "age": 95,
+        "maleDeathProbability": 0.261868,
+        "maleLifeExpectancy": 2.83,
+        "femaleDeathProbability": 0.214769,
+        "femaleLifeExpectancy": 3.37
+      },
+      {
+        "age": 96,
+        "maleDeathProbability": 0.282225,
+        "maleLifeExpectancy": 2.66,
+        "femaleDeathProbability": 0.233174,
+        "femaleLifeExpectancy": 3.16
+      },
+      {
+        "age": 97,
+        "maleDeathProbability": 0.301555,
+        "maleLifeExpectancy": 2.51,
+        "femaleDeathProbability": 0.251158,
+        "femaleLifeExpectancy": 2.96
+      },
+      {
+        "age": 98,
+        "maleDeathProbability": 0.319421,
+        "maleLifeExpectancy": 2.37,
+        "femaleDeathProbability": 0.268378,
+        "femaleLifeExpectancy": 2.79
+      },
+      {
+        "age": 99,
+        "maleDeathProbability": 0.335392,
+        "maleLifeExpectancy": 2.25,
+        "femaleDeathProbability": 0.284481,
+        "femaleLifeExpectancy": 2.63
+      },
+      {
+        "age": 100,
+        "maleDeathProbability": 0.352162,
+        "maleLifeExpectancy": 2.13,
+        "femaleDeathProbability": 0.30155,
+        "femaleLifeExpectancy": 2.48
+      },
+      {
+        "age": 101,
+        "maleDeathProbability": 0.36977,
+        "maleLifeExpectancy": 2.02,
+        "femaleDeathProbability": 0.319643,
+        "femaleLifeExpectancy": 2.33
+      },
+      {
+        "age": 102,
+        "maleDeathProbability": 0.388259,
+        "maleLifeExpectancy": 1.91,
+        "femaleDeathProbability": 0.338821,
+        "femaleLifeExpectancy": 2.19
+      },
+      {
+        "age": 103,
+        "maleDeathProbability": 0.407672,
+        "maleLifeExpectancy": 1.81,
+        "femaleDeathProbability": 0.359151,
+        "femaleLifeExpectancy": 2.06
+      },
+      {
+        "age": 104,
+        "maleDeathProbability": 0.428055,
+        "maleLifeExpectancy": 1.71,
+        "femaleDeathProbability": 0.3807,
+        "femaleLifeExpectancy": 1.93
+      },
+      {
+        "age": 105,
+        "maleDeathProbability": 0.449458,
+        "maleLifeExpectancy": 1.61,
+        "femaleDeathProbability": 0.403542,
+        "femaleLifeExpectancy": 1.81
+      },
+      {
+        "age": 106,
+        "maleDeathProbability": 0.471931,
+        "maleLifeExpectancy": 1.52,
+        "femaleDeathProbability": 0.427754,
+        "femaleLifeExpectancy": 1.69
+      },
+      {
+        "age": 107,
+        "maleDeathProbability": 0.495527,
+        "maleLifeExpectancy": 1.43,
+        "femaleDeathProbability": 0.45342,
+        "femaleLifeExpectancy": 1.58
+      },
+      {
+        "age": 108,
+        "maleDeathProbability": 0.520304,
+        "maleLifeExpectancy": 1.35,
+        "femaleDeathProbability": 0.480625,
+        "femaleLifeExpectancy": 1.47
+      },
+      {
+        "age": 109,
+        "maleDeathProbability": 0.546319,
+        "maleLifeExpectancy": 1.27,
+        "femaleDeathProbability": 0.509462,
+        "femaleLifeExpectancy": 1.37
+      },
+      {
+        "age": 110,
+        "maleDeathProbability": 0.573635,
+        "maleLifeExpectancy": 1.19,
+        "femaleDeathProbability": 0.54003,
+        "femaleLifeExpectancy": 1.27
+      },
+      {
+        "age": 111,
+        "maleDeathProbability": 0.602317,
+        "maleLifeExpectancy": 1.11,
+        "femaleDeathProbability": 0.572432,
+        "femaleLifeExpectancy": 1.18
+      },
+      {
+        "age": 112,
+        "maleDeathProbability": 0.632432,
+        "maleLifeExpectancy": 1.04,
+        "femaleDeathProbability": 0.606778,
+        "femaleLifeExpectancy": 1.09
+      },
+      {
+        "age": 113,
+        "maleDeathProbability": 0.664054,
+        "maleLifeExpectancy": 0.97,
+        "femaleDeathProbability": 0.643184,
+        "femaleLifeExpectancy": 1.01
+      },
+      {
+        "age": 114,
+        "maleDeathProbability": 0.697257,
+        "maleLifeExpectancy": 0.91,
+        "femaleDeathProbability": 0.681775,
+        "femaleLifeExpectancy": 0.93
+      },
+      {
+        "age": 115,
+        "maleDeathProbability": 0.732119,
+        "maleLifeExpectancy": 0.84,
+        "femaleDeathProbability": 0.722682,
+        "femaleLifeExpectancy": 0.86
+      },
+      {
+        "age": 116,
+        "maleDeathProbability": 0.768725,
+        "maleLifeExpectancy": 0.78,
+        "femaleDeathProbability": 0.766043,
+        "femaleLifeExpectancy": 0.79
+      },
+      {
+        "age": 117,
+        "maleDeathProbability": 0.807162,
+        "maleLifeExpectancy": 0.73,
+        "femaleDeathProbability": 0.807162,
+        "femaleLifeExpectancy": 0.73
+      },
+      {
+        "age": 118,
+        "maleDeathProbability": 0.84752,
+        "maleLifeExpectancy": 0.67,
+        "femaleDeathProbability": 0.84752,
+        "femaleLifeExpectancy": 0.67
+      },
+      {
+        "age": 119,
+        "maleDeathProbability": 0.889896,
+        "maleLifeExpectancy": 0.62,
+        "femaleDeathProbability": 0.889896,
+        "femaleLifeExpectancy": 0.62
+      }
+    ],
+    "assetClasses": [
+      {
+        "ClassId": 1,
+        "ClassName": "US Large Cap Stock",
+        "AnnualReturn": 6.52,
+        "StandardDeviation": 13.95
+      },
+      {
+        "ClassId": 2,
+        "ClassName": "US Small/Mid Cap Stock",
+        "AnnualReturn": 7.17,
+        "StandardDeviation": 18.64
+      },
+      {
+        "ClassId": 3,
+        "ClassName": "International Stock",
+        "AnnualReturn": 7.16,
+        "StandardDeviation": 16.65
+      },
+      {
+        "ClassId": 4,
+        "ClassName": "Bonds",
+        "AnnualReturn": 2.9,
+        "StandardDeviation": 3.39
+      },
+      {
+        "ClassId": 5,
+        "ClassName": "Cash",
+        "AnnualReturn": 2.2,
+        "StandardDeviation": 0.45
+      }
+    ],
+    "assetCorrelation": [
+      {
+        "ClassId1": 1,
+        "ClassId2": 1,
+        "AssetCorrelation": 1
+      },
+      {
+        "ClassId1": 1,
+        "ClassId2": 2,
+        "AssetCorrelation": 0.89
+      },
+      {
+        "ClassId1": 1,
+        "ClassId2": 3,
+        "AssetCorrelation": 0.87
+      },
+      {
+        "ClassId1": 1,
+        "ClassId2": 4,
+        "AssetCorrelation": -0.08
+      },
+      {
+        "ClassId1": 1,
+        "ClassId2": 5,
+        "AssetCorrelation": -0.07
+      },
+      {
+        "ClassId1": 2,
+        "ClassId2": 1,
+        "AssetCorrelation": 0.89
+      },
+      {
+        "ClassId1": 2,
+        "ClassId2": 2,
+        "AssetCorrelation": 1
+      },
+      {
+        "ClassId1": 2,
+        "ClassId2": 3,
+        "AssetCorrelation": 0.78
+      },
+      {
+        "ClassId1": 2,
+        "ClassId2": 4,
+        "AssetCorrelation": -0.14
+      },
+      {
+        "ClassId1": 2,
+        "ClassId2": 5,
+        "AssetCorrelation": -0.06
+      },
+      {
+        "ClassId1": 3,
+        "ClassId2": 1,
+        "AssetCorrelation": 0.87
+      },
+      {
+        "ClassId1": 3,
+        "ClassId2": 2,
+        "AssetCorrelation": 0.78
+      },
+      {
+        "ClassId1": 3,
+        "ClassId2": 3,
+        "AssetCorrelation": 1
+      },
+      {
+        "ClassId1": 3,
+        "ClassId2": 4,
+        "AssetCorrelation": 0.04
+      },
+      {
+        "ClassId1": 3,
+        "ClassId2": 5,
+        "AssetCorrelation": 0.02
+      },
+      {
+        "ClassId1": 4,
+        "ClassId2": 1,
+        "AssetCorrelation": -0.08
+      },
+      {
+        "ClassId1": 4,
+        "ClassId2": 2,
+        "AssetCorrelation": -0.14
+      },
+      {
+        "ClassId1": 4,
+        "ClassId2": 3,
+        "AssetCorrelation": 0.04
+      },
+      {
+        "ClassId1": 4,
+        "ClassId2": 4,
+        "AssetCorrelation": 1
+      },
+      {
+        "ClassId1": 4,
+        "ClassId2": 5,
+        "AssetCorrelation": 0.03
+      },
+      {
+        "ClassId1": 5,
+        "ClassId2": 1,
+        "AssetCorrelation": -0.07
+      },
+      {
+        "ClassId1": 5,
+        "ClassId2": 2,
+        "AssetCorrelation": -0.06
+      },
+      {
+        "ClassId1": 5,
+        "ClassId2": 3,
+        "AssetCorrelation": 0.02
+      },
+      {
+        "ClassId1": 5,
+        "ClassId2": 4,
+        "AssetCorrelation": 0.03
+      },
+      {
+        "ClassId1": 5,
+        "ClassId2": 5,
+        "AssetCorrelation": 1
+      }
+    ],
+    "glidePath": [
+      {
+        "YearsToRetirement": -25,
+        "ClassId": 1,
+        "ClassAllocation": 0.15
+      },
+      {
+        "YearsToRetirement": -24,
+        "ClassId": 1,
+        "ClassAllocation": 0.15
+      },
+      {
+        "YearsToRetirement": -23,
+        "ClassId": 1,
+        "ClassAllocation": 0.15
+      },
+      {
+        "YearsToRetirement": -22,
+        "ClassId": 1,
+        "ClassAllocation": 0.15
+      },
+      {
+        "YearsToRetirement": -21,
+        "ClassId": 1,
+        "ClassAllocation": 0.15
+      },
+      {
+        "YearsToRetirement": -20,
+        "ClassId": 1,
+        "ClassAllocation": 0.15
+      },
+      {
+        "YearsToRetirement": -19,
+        "ClassId": 1,
+        "ClassAllocation": 0.16
+      },
+      {
+        "YearsToRetirement": -18,
+        "ClassId": 1,
+        "ClassAllocation": 0.16
+      },
+      {
+        "YearsToRetirement": -17,
+        "ClassId": 1,
+        "ClassAllocation": 0.17
+      },
+      {
+        "YearsToRetirement": -16,
+        "ClassId": 1,
+        "ClassAllocation": 0.18
+      },
+      {
+        "YearsToRetirement": -15,
+        "ClassId": 1,
+        "ClassAllocation": 0.18
+      },
+      {
+        "YearsToRetirement": -14,
+        "ClassId": 1,
+        "ClassAllocation": 0.19
+      },
+      {
+        "YearsToRetirement": -13,
+        "ClassId": 1,
+        "ClassAllocation": 0.19
+      },
+      {
+        "YearsToRetirement": -12,
+        "ClassId": 1,
+        "ClassAllocation": 0.19
+      },
+      {
+        "YearsToRetirement": -11,
+        "ClassId": 1,
+        "ClassAllocation": 0.2
+      },
+      {
+        "YearsToRetirement": -10,
+        "ClassId": 1,
+        "ClassAllocation": 0.2
+      },
+      {
+        "YearsToRetirement": -9,
+        "ClassId": 1,
+        "ClassAllocation": 0.2
+      },
+      {
+        "YearsToRetirement": -8,
+        "ClassId": 1,
+        "ClassAllocation": 0.21
+      },
+      {
+        "YearsToRetirement": -7,
+        "ClassId": 1,
+        "ClassAllocation": 0.21
+      },
+      {
+        "YearsToRetirement": -6,
+        "ClassId": 1,
+        "ClassAllocation": 0.21
+      },
+      {
+        "YearsToRetirement": -5,
+        "ClassId": 1,
+        "ClassAllocation": 0.21
+      },
+      {
+        "YearsToRetirement": -4,
+        "ClassId": 1,
+        "ClassAllocation": 0.21
+      },
+      {
+        "YearsToRetirement": -3,
+        "ClassId": 1,
+        "ClassAllocation": 0.22
+      },
+      {
+        "YearsToRetirement": -2,
+        "ClassId": 1,
+        "ClassAllocation": 0.22
+      },
+      {
+        "YearsToRetirement": -1,
+        "ClassId": 1,
+        "ClassAllocation": 0.22
+      },
+      {
+        "YearsToRetirement": 0,
+        "ClassId": 1,
+        "ClassAllocation": 0.22
+      },
+      {
+        "YearsToRetirement": 1,
+        "ClassId": 1,
+        "ClassAllocation": 0.23
+      },
+      {
+        "YearsToRetirement": 2,
+        "ClassId": 1,
+        "ClassAllocation": 0.25
+      },
+      {
+        "YearsToRetirement": 3,
+        "ClassId": 1,
+        "ClassAllocation": 0.26
+      },
+      {
+        "YearsToRetirement": 4,
+        "ClassId": 1,
+        "ClassAllocation": 0.27
+      },
+      {
+        "YearsToRetirement": 5,
+        "ClassId": 1,
+        "ClassAllocation": 0.28
+      },
+      {
+        "YearsToRetirement": 6,
+        "ClassId": 1,
+        "ClassAllocation": 0.29
+      },
+      {
+        "YearsToRetirement": 7,
+        "ClassId": 1,
+        "ClassAllocation": 0.3
+      },
+      {
+        "YearsToRetirement": 8,
+        "ClassId": 1,
+        "ClassAllocation": 0.31
+      },
+      {
+        "YearsToRetirement": 9,
+        "ClassId": 1,
+        "ClassAllocation": 0.32
+      },
+      {
+        "YearsToRetirement": 10,
+        "ClassId": 1,
+        "ClassAllocation": 0.32
+      },
+      {
+        "YearsToRetirement": 11,
+        "ClassId": 1,
+        "ClassAllocation": 0.33
+      },
+      {
+        "YearsToRetirement": 12,
+        "ClassId": 1,
+        "ClassAllocation": 0.33
+      },
+      {
+        "YearsToRetirement": 13,
+        "ClassId": 1,
+        "ClassAllocation": 0.34
+      },
+      {
+        "YearsToRetirement": 14,
+        "ClassId": 1,
+        "ClassAllocation": 0.34
+      },
+      {
+        "YearsToRetirement": 15,
+        "ClassId": 1,
+        "ClassAllocation": 0.35
+      },
+      {
+        "YearsToRetirement": 16,
+        "ClassId": 1,
+        "ClassAllocation": 0.35
+      },
+      {
+        "YearsToRetirement": 17,
+        "ClassId": 1,
+        "ClassAllocation": 0.36
+      },
+      {
+        "YearsToRetirement": 18,
+        "ClassId": 1,
+        "ClassAllocation": 0.36
+      },
+      {
+        "YearsToRetirement": 19,
+        "ClassId": 1,
+        "ClassAllocation": 0.36
+      },
+      {
+        "YearsToRetirement": 20,
+        "ClassId": 1,
+        "ClassAllocation": 0.37
+      },
+      {
+        "YearsToRetirement": 21,
+        "ClassId": 1,
+        "ClassAllocation": 0.37
+      },
+      {
+        "YearsToRetirement": 22,
+        "ClassId": 1,
+        "ClassAllocation": 0.38
+      },
+      {
+        "YearsToRetirement": 23,
+        "ClassId": 1,
+        "ClassAllocation": 0.38
+      },
+      {
+        "YearsToRetirement": 24,
+        "ClassId": 1,
+        "ClassAllocation": 0.38
+      },
+      {
+        "YearsToRetirement": 25,
+        "ClassId": 1,
+        "ClassAllocation": 0.38
+      },
+      {
+        "YearsToRetirement": 26,
+        "ClassId": 1,
+        "ClassAllocation": 0.39
+      },
+      {
+        "YearsToRetirement": 27,
+        "ClassId": 1,
+        "ClassAllocation": 0.39
+      },
+      {
+        "YearsToRetirement": 28,
+        "ClassId": 1,
+        "ClassAllocation": 0.39
+      },
+      {
+        "YearsToRetirement": 29,
+        "ClassId": 1,
+        "ClassAllocation": 0.39
+      },
+      {
+        "YearsToRetirement": 30,
+        "ClassId": 1,
+        "ClassAllocation": 0.39
+      },
+      {
+        "YearsToRetirement": 31,
+        "ClassId": 1,
+        "ClassAllocation": 0.39
+      },
+      {
+        "YearsToRetirement": 32,
+        "ClassId": 1,
+        "ClassAllocation": 0.39
+      },
+      {
+        "YearsToRetirement": 33,
+        "ClassId": 1,
+        "ClassAllocation": 0.39
+      },
+      {
+        "YearsToRetirement": 34,
+        "ClassId": 1,
+        "ClassAllocation": 0.4
+      },
+      {
+        "YearsToRetirement": 35,
+        "ClassId": 1,
+        "ClassAllocation": 0.4
+      },
+      {
+        "YearsToRetirement": 36,
+        "ClassId": 1,
+        "ClassAllocation": 0.4
+      },
+      {
+        "YearsToRetirement": 37,
+        "ClassId": 1,
+        "ClassAllocation": 0.4
+      },
+      {
+        "YearsToRetirement": 38,
+        "ClassId": 1,
+        "ClassAllocation": 0.4
+      },
+      {
+        "YearsToRetirement": 39,
+        "ClassId": 1,
+        "ClassAllocation": 0.4
+      },
+      {
+        "YearsToRetirement": 40,
+        "ClassId": 1,
+        "ClassAllocation": 0.4
+      },
+      {
+        "YearsToRetirement": 41,
+        "ClassId": 1,
+        "ClassAllocation": 0.4
+      },
+      {
+        "YearsToRetirement": 42,
+        "ClassId": 1,
+        "ClassAllocation": 0.4
+      },
+      {
+        "YearsToRetirement": 43,
+        "ClassId": 1,
+        "ClassAllocation": 0.4
+      },
+      {
+        "YearsToRetirement": 44,
+        "ClassId": 1,
+        "ClassAllocation": 0.4
+      },
+      {
+        "YearsToRetirement": 45,
+        "ClassId": 1,
+        "ClassAllocation": 0.4
+      },
+      {
+        "YearsToRetirement": -25,
+        "ClassId": 2,
+        "ClassAllocation": 0.04
+      },
+      {
+        "YearsToRetirement": -24,
+        "ClassId": 2,
+        "ClassAllocation": 0.04
+      },
+      {
+        "YearsToRetirement": -23,
+        "ClassId": 2,
+        "ClassAllocation": 0.04
+      },
+      {
+        "YearsToRetirement": -22,
+        "ClassId": 2,
+        "ClassAllocation": 0.04
+      },
+      {
+        "YearsToRetirement": -21,
+        "ClassId": 2,
+        "ClassAllocation": 0.04
+      },
+      {
+        "YearsToRetirement": -20,
+        "ClassId": 2,
+        "ClassAllocation": 0.04
+      },
+      {
+        "YearsToRetirement": -19,
+        "ClassId": 2,
+        "ClassAllocation": 0.04
+      },
+      {
+        "YearsToRetirement": -18,
+        "ClassId": 2,
+        "ClassAllocation": 0.04
+      },
+      {
+        "YearsToRetirement": -17,
+        "ClassId": 2,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": -16,
+        "ClassId": 2,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": -15,
+        "ClassId": 2,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": -14,
+        "ClassId": 2,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": -13,
+        "ClassId": 2,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": -12,
+        "ClassId": 2,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -11,
+        "ClassId": 2,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -10,
+        "ClassId": 2,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -9,
+        "ClassId": 2,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -8,
+        "ClassId": 2,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -7,
+        "ClassId": 2,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -6,
+        "ClassId": 2,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -5,
+        "ClassId": 2,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -4,
+        "ClassId": 2,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -3,
+        "ClassId": 2,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -2,
+        "ClassId": 2,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -1,
+        "ClassId": 2,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": 0,
+        "ClassId": 2,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": 1,
+        "ClassId": 2,
+        "ClassAllocation": 0.08
+      },
+      {
+        "YearsToRetirement": 2,
+        "ClassId": 2,
+        "ClassAllocation": 0.08
+      },
+      {
+        "YearsToRetirement": 3,
+        "ClassId": 2,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": 4,
+        "ClassId": 2,
+        "ClassAllocation": 0.1
+      },
+      {
+        "YearsToRetirement": 5,
+        "ClassId": 2,
+        "ClassAllocation": 0.1
+      },
+      {
+        "YearsToRetirement": 6,
+        "ClassId": 2,
+        "ClassAllocation": 0.11
+      },
+      {
+        "YearsToRetirement": 7,
+        "ClassId": 2,
+        "ClassAllocation": 0.11
+      },
+      {
+        "YearsToRetirement": 8,
+        "ClassId": 2,
+        "ClassAllocation": 0.12
+      },
+      {
+        "YearsToRetirement": 9,
+        "ClassId": 2,
+        "ClassAllocation": 0.12
+      },
+      {
+        "YearsToRetirement": 10,
+        "ClassId": 2,
+        "ClassAllocation": 0.13
+      },
+      {
+        "YearsToRetirement": 11,
+        "ClassId": 2,
+        "ClassAllocation": 0.13
+      },
+      {
+        "YearsToRetirement": 12,
+        "ClassId": 2,
+        "ClassAllocation": 0.14
+      },
+      {
+        "YearsToRetirement": 13,
+        "ClassId": 2,
+        "ClassAllocation": 0.14
+      },
+      {
+        "YearsToRetirement": 14,
+        "ClassId": 2,
+        "ClassAllocation": 0.15
+      },
+      {
+        "YearsToRetirement": 15,
+        "ClassId": 2,
+        "ClassAllocation": 0.15
+      },
+      {
+        "YearsToRetirement": 16,
+        "ClassId": 2,
+        "ClassAllocation": 0.16
+      },
+      {
+        "YearsToRetirement": 17,
+        "ClassId": 2,
+        "ClassAllocation": 0.16
+      },
+      {
+        "YearsToRetirement": 18,
+        "ClassId": 2,
+        "ClassAllocation": 0.17
+      },
+      {
+        "YearsToRetirement": 19,
+        "ClassId": 2,
+        "ClassAllocation": 0.17
+      },
+      {
+        "YearsToRetirement": 20,
+        "ClassId": 2,
+        "ClassAllocation": 0.17
+      },
+      {
+        "YearsToRetirement": 21,
+        "ClassId": 2,
+        "ClassAllocation": 0.18
+      },
+      {
+        "YearsToRetirement": 22,
+        "ClassId": 2,
+        "ClassAllocation": 0.18
+      },
+      {
+        "YearsToRetirement": 23,
+        "ClassId": 2,
+        "ClassAllocation": 0.19
+      },
+      {
+        "YearsToRetirement": 24,
+        "ClassId": 2,
+        "ClassAllocation": 0.19
+      },
+      {
+        "YearsToRetirement": 25,
+        "ClassId": 2,
+        "ClassAllocation": 0.2
+      },
+      {
+        "YearsToRetirement": 26,
+        "ClassId": 2,
+        "ClassAllocation": 0.2
+      },
+      {
+        "YearsToRetirement": 27,
+        "ClassId": 2,
+        "ClassAllocation": 0.2
+      },
+      {
+        "YearsToRetirement": 28,
+        "ClassId": 2,
+        "ClassAllocation": 0.2
+      },
+      {
+        "YearsToRetirement": 29,
+        "ClassId": 2,
+        "ClassAllocation": 0.21
+      },
+      {
+        "YearsToRetirement": 30,
+        "ClassId": 2,
+        "ClassAllocation": 0.21
+      },
+      {
+        "YearsToRetirement": 31,
+        "ClassId": 2,
+        "ClassAllocation": 0.21
+      },
+      {
+        "YearsToRetirement": 32,
+        "ClassId": 2,
+        "ClassAllocation": 0.21
+      },
+      {
+        "YearsToRetirement": 33,
+        "ClassId": 2,
+        "ClassAllocation": 0.21
+      },
+      {
+        "YearsToRetirement": 34,
+        "ClassId": 2,
+        "ClassAllocation": 0.21
+      },
+      {
+        "YearsToRetirement": 35,
+        "ClassId": 2,
+        "ClassAllocation": 0.22
+      },
+      {
+        "YearsToRetirement": 36,
+        "ClassId": 2,
+        "ClassAllocation": 0.22
+      },
+      {
+        "YearsToRetirement": 37,
+        "ClassId": 2,
+        "ClassAllocation": 0.22
+      },
+      {
+        "YearsToRetirement": 38,
+        "ClassId": 2,
+        "ClassAllocation": 0.22
+      },
+      {
+        "YearsToRetirement": 39,
+        "ClassId": 2,
+        "ClassAllocation": 0.22
+      },
+      {
+        "YearsToRetirement": 40,
+        "ClassId": 2,
+        "ClassAllocation": 0.23
+      },
+      {
+        "YearsToRetirement": 41,
+        "ClassId": 2,
+        "ClassAllocation": 0.23
+      },
+      {
+        "YearsToRetirement": 42,
+        "ClassId": 2,
+        "ClassAllocation": 0.23
+      },
+      {
+        "YearsToRetirement": 43,
+        "ClassId": 2,
+        "ClassAllocation": 0.23
+      },
+      {
+        "YearsToRetirement": 44,
+        "ClassId": 2,
+        "ClassAllocation": 0.23
+      },
+      {
+        "YearsToRetirement": 45,
+        "ClassId": 2,
+        "ClassAllocation": 0.23
+      },
+      {
+        "YearsToRetirement": -25,
+        "ClassId": 3,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -24,
+        "ClassId": 3,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -23,
+        "ClassId": 3,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -22,
+        "ClassId": 3,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -21,
+        "ClassId": 3,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -20,
+        "ClassId": 3,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": -19,
+        "ClassId": 3,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -18,
+        "ClassId": 3,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -17,
+        "ClassId": 3,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -16,
+        "ClassId": 3,
+        "ClassAllocation": 0.08
+      },
+      {
+        "YearsToRetirement": -15,
+        "ClassId": 3,
+        "ClassAllocation": 0.08
+      },
+      {
+        "YearsToRetirement": -14,
+        "ClassId": 3,
+        "ClassAllocation": 0.08
+      },
+      {
+        "YearsToRetirement": -13,
+        "ClassId": 3,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": -12,
+        "ClassId": 3,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": -11,
+        "ClassId": 3,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": -10,
+        "ClassId": 3,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": -9,
+        "ClassId": 3,
+        "ClassAllocation": 0.1
+      },
+      {
+        "YearsToRetirement": -8,
+        "ClassId": 3,
+        "ClassAllocation": 0.1
+      },
+      {
+        "YearsToRetirement": -7,
+        "ClassId": 3,
+        "ClassAllocation": 0.1
+      },
+      {
+        "YearsToRetirement": -6,
+        "ClassId": 3,
+        "ClassAllocation": 0.1
+      },
+      {
+        "YearsToRetirement": -5,
+        "ClassId": 3,
+        "ClassAllocation": 0.1
+      },
+      {
+        "YearsToRetirement": -4,
+        "ClassId": 3,
+        "ClassAllocation": 0.11
+      },
+      {
+        "YearsToRetirement": -3,
+        "ClassId": 3,
+        "ClassAllocation": 0.11
+      },
+      {
+        "YearsToRetirement": -2,
+        "ClassId": 3,
+        "ClassAllocation": 0.11
+      },
+      {
+        "YearsToRetirement": -1,
+        "ClassId": 3,
+        "ClassAllocation": 0.11
+      },
+      {
+        "YearsToRetirement": 0,
+        "ClassId": 3,
+        "ClassAllocation": 0.11
+      },
+      {
+        "YearsToRetirement": 1,
+        "ClassId": 3,
+        "ClassAllocation": 0.12
+      },
+      {
+        "YearsToRetirement": 2,
+        "ClassId": 3,
+        "ClassAllocation": 0.13
+      },
+      {
+        "YearsToRetirement": 3,
+        "ClassId": 3,
+        "ClassAllocation": 0.14
+      },
+      {
+        "YearsToRetirement": 4,
+        "ClassId": 3,
+        "ClassAllocation": 0.15
+      },
+      {
+        "YearsToRetirement": 5,
+        "ClassId": 3,
+        "ClassAllocation": 0.16
+      },
+      {
+        "YearsToRetirement": 6,
+        "ClassId": 3,
+        "ClassAllocation": 0.17
+      },
+      {
+        "YearsToRetirement": 7,
+        "ClassId": 3,
+        "ClassAllocation": 0.18
+      },
+      {
+        "YearsToRetirement": 8,
+        "ClassId": 3,
+        "ClassAllocation": 0.19
+      },
+      {
+        "YearsToRetirement": 9,
+        "ClassId": 3,
+        "ClassAllocation": 0.19
+      },
+      {
+        "YearsToRetirement": 10,
+        "ClassId": 3,
+        "ClassAllocation": 0.2
+      },
+      {
+        "YearsToRetirement": 11,
+        "ClassId": 3,
+        "ClassAllocation": 0.21
+      },
+      {
+        "YearsToRetirement": 12,
+        "ClassId": 3,
+        "ClassAllocation": 0.21
+      },
+      {
+        "YearsToRetirement": 13,
+        "ClassId": 3,
+        "ClassAllocation": 0.22
+      },
+      {
+        "YearsToRetirement": 14,
+        "ClassId": 3,
+        "ClassAllocation": 0.22
+      },
+      {
+        "YearsToRetirement": 15,
+        "ClassId": 3,
+        "ClassAllocation": 0.23
+      },
+      {
+        "YearsToRetirement": 16,
+        "ClassId": 3,
+        "ClassAllocation": 0.24
+      },
+      {
+        "YearsToRetirement": 17,
+        "ClassId": 3,
+        "ClassAllocation": 0.24
+      },
+      {
+        "YearsToRetirement": 18,
+        "ClassId": 3,
+        "ClassAllocation": 0.25
+      },
+      {
+        "YearsToRetirement": 19,
+        "ClassId": 3,
+        "ClassAllocation": 0.25
+      },
+      {
+        "YearsToRetirement": 20,
+        "ClassId": 3,
+        "ClassAllocation": 0.26
+      },
+      {
+        "YearsToRetirement": 21,
+        "ClassId": 3,
+        "ClassAllocation": 0.26
+      },
+      {
+        "YearsToRetirement": 22,
+        "ClassId": 3,
+        "ClassAllocation": 0.27
+      },
+      {
+        "YearsToRetirement": 23,
+        "ClassId": 3,
+        "ClassAllocation": 0.28
+      },
+      {
+        "YearsToRetirement": 24,
+        "ClassId": 3,
+        "ClassAllocation": 0.28
+      },
+      {
+        "YearsToRetirement": 25,
+        "ClassId": 3,
+        "ClassAllocation": 0.29
+      },
+      {
+        "YearsToRetirement": 26,
+        "ClassId": 3,
+        "ClassAllocation": 0.29
+      },
+      {
+        "YearsToRetirement": 27,
+        "ClassId": 3,
+        "ClassAllocation": 0.29
+      },
+      {
+        "YearsToRetirement": 28,
+        "ClassId": 3,
+        "ClassAllocation": 0.3
+      },
+      {
+        "YearsToRetirement": 29,
+        "ClassId": 3,
+        "ClassAllocation": 0.3
+      },
+      {
+        "YearsToRetirement": 30,
+        "ClassId": 3,
+        "ClassAllocation": 0.3
+      },
+      {
+        "YearsToRetirement": 31,
+        "ClassId": 3,
+        "ClassAllocation": 0.3
+      },
+      {
+        "YearsToRetirement": 32,
+        "ClassId": 3,
+        "ClassAllocation": 0.31
+      },
+      {
+        "YearsToRetirement": 33,
+        "ClassId": 3,
+        "ClassAllocation": 0.31
+      },
+      {
+        "YearsToRetirement": 34,
+        "ClassId": 3,
+        "ClassAllocation": 0.31
+      },
+      {
+        "YearsToRetirement": 35,
+        "ClassId": 3,
+        "ClassAllocation": 0.31
+      },
+      {
+        "YearsToRetirement": 36,
+        "ClassId": 3,
+        "ClassAllocation": 0.31
+      },
+      {
+        "YearsToRetirement": 37,
+        "ClassId": 3,
+        "ClassAllocation": 0.32
+      },
+      {
+        "YearsToRetirement": 38,
+        "ClassId": 3,
+        "ClassAllocation": 0.32
+      },
+      {
+        "YearsToRetirement": 39,
+        "ClassId": 3,
+        "ClassAllocation": 0.32
+      },
+      {
+        "YearsToRetirement": 40,
+        "ClassId": 3,
+        "ClassAllocation": 0.32
+      },
+      {
+        "YearsToRetirement": 41,
+        "ClassId": 3,
+        "ClassAllocation": 0.32
+      },
+      {
+        "YearsToRetirement": 42,
+        "ClassId": 3,
+        "ClassAllocation": 0.32
+      },
+      {
+        "YearsToRetirement": 43,
+        "ClassId": 3,
+        "ClassAllocation": 0.32
+      },
+      {
+        "YearsToRetirement": 44,
+        "ClassId": 3,
+        "ClassAllocation": 0.32
+      },
+      {
+        "YearsToRetirement": 45,
+        "ClassId": 3,
+        "ClassAllocation": 0.32
+      },
+      {
+        "YearsToRetirement": -25,
+        "ClassId": 4,
+        "ClassAllocation": 0.66
+      },
+      {
+        "YearsToRetirement": -24,
+        "ClassId": 4,
+        "ClassAllocation": 0.66
+      },
+      {
+        "YearsToRetirement": -23,
+        "ClassId": 4,
+        "ClassAllocation": 0.66
+      },
+      {
+        "YearsToRetirement": -22,
+        "ClassId": 4,
+        "ClassAllocation": 0.66
+      },
+      {
+        "YearsToRetirement": -21,
+        "ClassId": 4,
+        "ClassAllocation": 0.66
+      },
+      {
+        "YearsToRetirement": -20,
+        "ClassId": 4,
+        "ClassAllocation": 0.66
+      },
+      {
+        "YearsToRetirement": -19,
+        "ClassId": 4,
+        "ClassAllocation": 0.64
+      },
+      {
+        "YearsToRetirement": -18,
+        "ClassId": 4,
+        "ClassAllocation": 0.63
+      },
+      {
+        "YearsToRetirement": -17,
+        "ClassId": 4,
+        "ClassAllocation": 0.62
+      },
+      {
+        "YearsToRetirement": -16,
+        "ClassId": 4,
+        "ClassAllocation": 0.62
+      },
+      {
+        "YearsToRetirement": -15,
+        "ClassId": 4,
+        "ClassAllocation": 0.61
+      },
+      {
+        "YearsToRetirement": -14,
+        "ClassId": 4,
+        "ClassAllocation": 0.6
+      },
+      {
+        "YearsToRetirement": -13,
+        "ClassId": 4,
+        "ClassAllocation": 0.59
+      },
+      {
+        "YearsToRetirement": -12,
+        "ClassId": 4,
+        "ClassAllocation": 0.59
+      },
+      {
+        "YearsToRetirement": -11,
+        "ClassId": 4,
+        "ClassAllocation": 0.58
+      },
+      {
+        "YearsToRetirement": -10,
+        "ClassId": 4,
+        "ClassAllocation": 0.57
+      },
+      {
+        "YearsToRetirement": -9,
+        "ClassId": 4,
+        "ClassAllocation": 0.57
+      },
+      {
+        "YearsToRetirement": -8,
+        "ClassId": 4,
+        "ClassAllocation": 0.56
+      },
+      {
+        "YearsToRetirement": -7,
+        "ClassId": 4,
+        "ClassAllocation": 0.56
+      },
+      {
+        "YearsToRetirement": -6,
+        "ClassId": 4,
+        "ClassAllocation": 0.55
+      },
+      {
+        "YearsToRetirement": -5,
+        "ClassId": 4,
+        "ClassAllocation": 0.55
+      },
+      {
+        "YearsToRetirement": -4,
+        "ClassId": 4,
+        "ClassAllocation": 0.55
+      },
+      {
+        "YearsToRetirement": -3,
+        "ClassId": 4,
+        "ClassAllocation": 0.54
+      },
+      {
+        "YearsToRetirement": -2,
+        "ClassId": 4,
+        "ClassAllocation": 0.54
+      },
+      {
+        "YearsToRetirement": -1,
+        "ClassId": 4,
+        "ClassAllocation": 0.54
+      },
+      {
+        "YearsToRetirement": 0,
+        "ClassId": 4,
+        "ClassAllocation": 0.53
+      },
+      {
+        "YearsToRetirement": 1,
+        "ClassId": 4,
+        "ClassAllocation": 0.51
+      },
+      {
+        "YearsToRetirement": 2,
+        "ClassId": 4,
+        "ClassAllocation": 0.48
+      },
+      {
+        "YearsToRetirement": 3,
+        "ClassId": 4,
+        "ClassAllocation": 0.45
+      },
+      {
+        "YearsToRetirement": 4,
+        "ClassId": 4,
+        "ClassAllocation": 0.43
+      },
+      {
+        "YearsToRetirement": 5,
+        "ClassId": 4,
+        "ClassAllocation": 0.41
+      },
+      {
+        "YearsToRetirement": 6,
+        "ClassId": 4,
+        "ClassAllocation": 0.39
+      },
+      {
+        "YearsToRetirement": 7,
+        "ClassId": 4,
+        "ClassAllocation": 0.37
+      },
+      {
+        "YearsToRetirement": 8,
+        "ClassId": 4,
+        "ClassAllocation": 0.35
+      },
+      {
+        "YearsToRetirement": 9,
+        "ClassId": 4,
+        "ClassAllocation": 0.33
+      },
+      {
+        "YearsToRetirement": 10,
+        "ClassId": 4,
+        "ClassAllocation": 0.32
+      },
+      {
+        "YearsToRetirement": 11,
+        "ClassId": 4,
+        "ClassAllocation": 0.3
+      },
+      {
+        "YearsToRetirement": 12,
+        "ClassId": 4,
+        "ClassAllocation": 0.28
+      },
+      {
+        "YearsToRetirement": 13,
+        "ClassId": 4,
+        "ClassAllocation": 0.27
+      },
+      {
+        "YearsToRetirement": 14,
+        "ClassId": 4,
+        "ClassAllocation": 0.26
+      },
+      {
+        "YearsToRetirement": 15,
+        "ClassId": 4,
+        "ClassAllocation": 0.24
+      },
+      {
+        "YearsToRetirement": 16,
+        "ClassId": 4,
+        "ClassAllocation": 0.23
+      },
+      {
+        "YearsToRetirement": 17,
+        "ClassId": 4,
+        "ClassAllocation": 0.22
+      },
+      {
+        "YearsToRetirement": 18,
+        "ClassId": 4,
+        "ClassAllocation": 0.2
+      },
+      {
+        "YearsToRetirement": 19,
+        "ClassId": 4,
+        "ClassAllocation": 0.19
+      },
+      {
+        "YearsToRetirement": 20,
+        "ClassId": 4,
+        "ClassAllocation": 0.18
+      },
+      {
+        "YearsToRetirement": 21,
+        "ClassId": 4,
+        "ClassAllocation": 0.17
+      },
+      {
+        "YearsToRetirement": 22,
+        "ClassId": 4,
+        "ClassAllocation": 0.15
+      },
+      {
+        "YearsToRetirement": 23,
+        "ClassId": 4,
+        "ClassAllocation": 0.14
+      },
+      {
+        "YearsToRetirement": 24,
+        "ClassId": 4,
+        "ClassAllocation": 0.13
+      },
+      {
+        "YearsToRetirement": 25,
+        "ClassId": 4,
+        "ClassAllocation": 0.12
+      },
+      {
+        "YearsToRetirement": 26,
+        "ClassId": 4,
+        "ClassAllocation": 0.11
+      },
+      {
+        "YearsToRetirement": 27,
+        "ClassId": 4,
+        "ClassAllocation": 0.11
+      },
+      {
+        "YearsToRetirement": 28,
+        "ClassId": 4,
+        "ClassAllocation": 0.1
+      },
+      {
+        "YearsToRetirement": 29,
+        "ClassId": 4,
+        "ClassAllocation": 0.1
+      },
+      {
+        "YearsToRetirement": 30,
+        "ClassId": 4,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": 31,
+        "ClassId": 4,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": 32,
+        "ClassId": 4,
+        "ClassAllocation": 0.08
+      },
+      {
+        "YearsToRetirement": 33,
+        "ClassId": 4,
+        "ClassAllocation": 0.08
+      },
+      {
+        "YearsToRetirement": 34,
+        "ClassId": 4,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": 35,
+        "ClassId": 4,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": 36,
+        "ClassId": 4,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": 37,
+        "ClassId": 4,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": 38,
+        "ClassId": 4,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": 39,
+        "ClassId": 4,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": 40,
+        "ClassId": 4,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": 41,
+        "ClassId": 4,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": 42,
+        "ClassId": 4,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": 43,
+        "ClassId": 4,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": 44,
+        "ClassId": 4,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": 45,
+        "ClassId": 4,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": -25,
+        "ClassId": 5,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": -24,
+        "ClassId": 5,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": -23,
+        "ClassId": 5,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": -22,
+        "ClassId": 5,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": -21,
+        "ClassId": 5,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": -20,
+        "ClassId": 5,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": -19,
+        "ClassId": 5,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": -18,
+        "ClassId": 5,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": -17,
+        "ClassId": 5,
+        "ClassAllocation": 0.09
+      },
+      {
+        "YearsToRetirement": -16,
+        "ClassId": 5,
+        "ClassAllocation": 0.08
+      },
+      {
+        "YearsToRetirement": -15,
+        "ClassId": 5,
+        "ClassAllocation": 0.08
+      },
+      {
+        "YearsToRetirement": -14,
+        "ClassId": 5,
+        "ClassAllocation": 0.08
+      },
+      {
+        "YearsToRetirement": -13,
+        "ClassId": 5,
+        "ClassAllocation": 0.08
+      },
+      {
+        "YearsToRetirement": -12,
+        "ClassId": 5,
+        "ClassAllocation": 0.08
+      },
+      {
+        "YearsToRetirement": -11,
+        "ClassId": 5,
+        "ClassAllocation": 0.08
+      },
+      {
+        "YearsToRetirement": -10,
+        "ClassId": 5,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -9,
+        "ClassId": 5,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -8,
+        "ClassId": 5,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -7,
+        "ClassId": 5,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -6,
+        "ClassId": 5,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -5,
+        "ClassId": 5,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -4,
+        "ClassId": 5,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -3,
+        "ClassId": 5,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -2,
+        "ClassId": 5,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": -1,
+        "ClassId": 5,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": 0,
+        "ClassId": 5,
+        "ClassAllocation": 0.07
+      },
+      {
+        "YearsToRetirement": 1,
+        "ClassId": 5,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": 2,
+        "ClassId": 5,
+        "ClassAllocation": 0.06
+      },
+      {
+        "YearsToRetirement": 3,
+        "ClassId": 5,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": 4,
+        "ClassId": 5,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": 5,
+        "ClassId": 5,
+        "ClassAllocation": 0.05
+      },
+      {
+        "YearsToRetirement": 6,
+        "ClassId": 5,
+        "ClassAllocation": 0.04
+      },
+      {
+        "YearsToRetirement": 7,
+        "ClassId": 5,
+        "ClassAllocation": 0.04
+      },
+      {
+        "YearsToRetirement": 8,
+        "ClassId": 5,
+        "ClassAllocation": 0.04
+      },
+      {
+        "YearsToRetirement": 9,
+        "ClassId": 5,
+        "ClassAllocation": 0.04
+      },
+      {
+        "YearsToRetirement": 10,
+        "ClassId": 5,
+        "ClassAllocation": 0.04
+      },
+      {
+        "YearsToRetirement": 11,
+        "ClassId": 5,
+        "ClassAllocation": 0.03
+      },
+      {
+        "YearsToRetirement": 12,
+        "ClassId": 5,
+        "ClassAllocation": 0.03
+      },
+      {
+        "YearsToRetirement": 13,
+        "ClassId": 5,
+        "ClassAllocation": 0.03
+      },
+      {
+        "YearsToRetirement": 14,
+        "ClassId": 5,
+        "ClassAllocation": 0.03
+      },
+      {
+        "YearsToRetirement": 15,
+        "ClassId": 5,
+        "ClassAllocation": 0.03
+      },
+      {
+        "YearsToRetirement": 16,
+        "ClassId": 5,
+        "ClassAllocation": 0.03
+      },
+      {
+        "YearsToRetirement": 17,
+        "ClassId": 5,
+        "ClassAllocation": 0.02
+      },
+      {
+        "YearsToRetirement": 18,
+        "ClassId": 5,
+        "ClassAllocation": 0.02
+      },
+      {
+        "YearsToRetirement": 19,
+        "ClassId": 5,
+        "ClassAllocation": 0.02
+      },
+      {
+        "YearsToRetirement": 20,
+        "ClassId": 5,
+        "ClassAllocation": 0.02
+      },
+      {
+        "YearsToRetirement": 21,
+        "ClassId": 5,
+        "ClassAllocation": 0.02
+      },
+      {
+        "YearsToRetirement": 22,
+        "ClassId": 5,
+        "ClassAllocation": 0.02
+      },
+      {
+        "YearsToRetirement": 23,
+        "ClassId": 5,
+        "ClassAllocation": 0.02
+      },
+      {
+        "YearsToRetirement": 24,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 25,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 26,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 27,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 28,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 29,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 30,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 31,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 32,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 33,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 34,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 35,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 36,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 37,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 38,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 39,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 40,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 41,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 42,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 43,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 44,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      },
+      {
+        "YearsToRetirement": 45,
+        "ClassId": 5,
+        "ClassAllocation": 0.01
+      }
+    ]
+  }
+}

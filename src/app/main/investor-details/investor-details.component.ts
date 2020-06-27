@@ -26,15 +26,15 @@ export class InvestorDetailsComponent implements OnInit {
 	@Input() disabled: boolean = true;
 	@Input() progress: number = 100;
 
-	_currency:InputType = InputType.Currency;
-	_percent:InputType = InputType.Percent;
-	_number:InputType = InputType.Number;
+	_currency: InputType = InputType.Currency;
+	_percent: InputType = InputType.Percent;
+	_number: InputType = InputType.Number;
 
-	_fiftyPercentUpTo6:MatchType = MatchType.FiftyPercentUpTo6;
-	_hundredPercentUpTo3PlusFiftyPercentUpTo5:MatchType = MatchType.HundredPercentUpTo3PlusFiftyPercentUpTo5;
-	_hundredPercentUpTo4:MatchType = MatchType.HundredPercentUpTo4;
-	_hundredPercentUpTo6:MatchType = MatchType.HundredPercentUpTo6;
-	_noMatch:MatchType = MatchType.NoMatch;
+	_fiftyPercentUpTo6: MatchType = MatchType.FiftyPercentUpTo6;
+	_hundredPercentUpTo3PlusFiftyPercentUpTo5: MatchType = MatchType.HundredPercentUpTo3PlusFiftyPercentUpTo5;
+	_hundredPercentUpTo4: MatchType = MatchType.HundredPercentUpTo4;
+	_hundredPercentUpTo6: MatchType = MatchType.HundredPercentUpTo6;
+	_noMatch: MatchType = MatchType.NoMatch;
 
 	constructor() { }
 
@@ -47,6 +47,14 @@ export class InvestorDetailsComponent implements OnInit {
 		switch (field) {
 			case "balance":
 				if (value !== this.balance) {
+					this.investorDetailChanged.emit({
+						field: field,
+						value: value
+					});
+				}
+				break;
+			case "salary":
+				if (value !== this.salary) {
 					this.investorDetailChanged.emit({
 						field: field,
 						value: value
@@ -77,24 +85,33 @@ export class InvestorDetailsComponent implements OnInit {
 					});
 				}
 				break;
+			case "annuitizedPercent":
+				if (value !== this.annuitizedPercent) {
+					this.investorDetailChanged.emit({
+						field: field,
+						value: value
+					});
+				}
+				break;
+
 		}
 	}
-	onRadioButtonChanged(value:MatchType) {
-		if (value !== this.matchType) {
-			this.investorDetailChanged.emit({
-				field: "matchType",
-				value: value
-			});
-		}
-	}
-	onSelectChanged(value:number) {
-		if (value !== this.annuitizedPercent) {
-			this.investorDetailChanged.emit({
-				field: "annuitizedPercent",
-				value: value
-			});
-		}
-	}	
+	// onRadioButtonChanged(value:MatchType) {
+	// 	if (value !== this.matchType) {
+	// 		this.investorDetailChanged.emit({
+	// 			field: "matchType",
+	// 			value: value
+	// 		});
+	// 	}
+	// }
+	// onSelectChanged(value:number) {
+	// 	if (value !== this.annuitizedPercent) {
+	// 		this.investorDetailChanged.emit({
+	// 			field: "annuitizedPercent",
+	// 			value: value
+	// 		});
+	// 	}
+	// }	
 	onButtonClicked() {
 		console.log("onButtonClicked");
 		this.simulateButtonClicked.emit();

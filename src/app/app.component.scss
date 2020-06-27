@@ -1,3 +1,29 @@
 #container {
-	padding: 1rem;
+  padding: 1rem;
 }
+
+input[type="text"],
+button {
+  font: inherit;
+  font-size: var(--normal-font-size);
+  appearance: none;
+  border-radius: var(--normal-border-radius);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: var(--normal-border-radius);
+  border: none;
+  cursor: pointer;
+}
+button:focus,
+input:focus {
+  outline: none;
+}
+button:disabled {
+  background-color: var(--light-gray);
+  cursor: auto;
+}
+

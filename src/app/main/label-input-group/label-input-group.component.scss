@@ -1,6 +1,23 @@
 .label-input-group {
-	margin: 1rem 0;
+	margin: 2rem 0;
+}
+label,
+input {
+	display: block;
+	text-align: center;
 }
 label {
-	margin-right: 1rem;
+	font-size: 1rem;
+	max-width: 50ch;
+	margin: 0 auto 0.25rem auto;
+	line-height: 1.5;
+}
+input {
+	margin: 0 auto 0;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px dashed #999;
+	font-size: 1.75rem;
+	color: var(--primary-color);
+	width: 14ch;
 }

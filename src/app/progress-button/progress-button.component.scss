@@ -1,27 +1,36 @@
 #container {
-	position: relative;
-	width: 200px;
-	height: 2.5rem;
-	background-color: var(--light-gray);
-	clip-path: inset(0 0 0 0 round 0.25rem);
+  margin: 1rem auto;
+  position: relative;
+  width: 200px;
+  height: 2.5rem;
+  background-color: var(--light-gray);
+  clip-path: inset(0 0 0 0 round 0.25rem);
 }
+
+#container,
+#container * {
+  box-sizing: border-box;
+}
+
 #fill,
 button {
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
+
 #fill {
-	background-color: var(--primary-color);
-	z-index: 2;
-	transition: width 200ms ease-in-out;
+  background-color: var(--primary-color);
+  z-index: 2;
+  transition: width 200ms ease-in-out;
 }
+
 button {
-	width: 100%;
-	height: 100%;
-	padding: 0;
-	background-color: transparent;
-	z-index: 3;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background-color: transparent;
+  z-index: 3;
 }

@@ -1,7 +1,7 @@
 <div class="container">
 	<app-label-input-group
 		(inputChanged)="onInputChanged($event)"
-		label="How much have you saved so far?"
+		label="How much have you saved for retirement so far?"
 		[value]="balance"
 		field="balance"
 		[inputType]="_currency"
@@ -23,7 +23,7 @@
 	</app-label-input-group>
 	<app-label-input-group
 		(inputChanged)="onInputChanged($event)"
-		label="What percent of your salary to you save?"
+		label="What percent of your salary do you save for retirement each year?"
 		[value]="savingsPercent"
 		field="savingsPercent"
 		[inputType]="_percent"
@@ -54,14 +54,22 @@
 		maxlength="2"
 		placeholder="25">
 	</app-label-input-group>
-	<div class="padding">
+	<app-label-input-group
+		(inputChanged)="onInputChanged($event)"
+		label="What percent of your retirement savings might you allocate to an Lifetime Income Annuity?"
+		[value]="annuitizedPercent"
+		field="annuitizedPercent"
+		[inputType]="_percent"
+		min="0"
+		max="100"
+		maxLength="3"
+		placeholder="0%">
+	</app-label-input-group>
+	<!-- <div class="padding">
 		<label>What percent of your savings are you considering converting to an annuity?</label>
 		<select name="annuitizedPercent" #select (change)="onSelectChanged(select.value)">
 			<option *ngFor="let option of [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100]" value="{{option}}" [selected]="option == annuitizedPercent">{{option}}%</option>
 		</select>
-	</div>
-	<!-- <button (click)="onButtonClicked()" [disabled]="disabled">Calculate results</button> -->
-	<div class="padding">
-		<app-progress-button (progressButtonClicked)="onButtonClicked()" [disabled]="disabled" [progress]="progress">Calculate results</app-progress-button>
-	</div>
+	</div> -->
+	<app-progress-button (progressButtonClicked)="onButtonClicked()" [disabled]="disabled" [progress]="progress">Calculate results</app-progress-button>
 </div>

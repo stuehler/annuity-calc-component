@@ -1,0 +1,21 @@
+<svg #chart xmlns="http://www.w3.org/2000/svg" width="100%" height="300">
+	<g *ngIf="annualRetirementIncomeCdf && this._chartProperties">
+		<path fill="red" stroke="none" opacity="0.5" [attr.d]="_chartProperties.retirementIncomeWithDiaSpline"/>
+		<path fill="blue" stroke="none" opacity="0.5" [attr.d]="_chartProperties.retirementIncomeSpline"/>
+		<g stroke="none" text-anchor="middle" font-size="14" class="labels">
+			<text *ngFor="let label of this._chartProperties.xAxisLabels" [attr.x]="label.x" [attr.y]="label.y" >{{label.label}}</text>
+		</g>
+		<g fill="none" stroke="#ccc">
+			<line *ngFor="let tickmark of this._chartProperties.xAxisTickmarks" [attr.x1]="tickmark.x1" [attr.x2]="tickmark.x2" [attr.y1]="tickmark.y1" [attr.y2]="tickmark.y2" />
+		</g>
+		<g stroke="none" font-size="14" class="labels" >
+			<text text-anchor="start" [attr.x]="_chartProperties.lowerYAxisLabel.x" [attr.y]="_chartProperties.lowerYAxisLabel.y" [attr.transform]="_chartProperties.lowerYAxisLabel.transform">0%</text>
+			<text text-anchor="end" [attr.x]="_chartProperties.upperYAxisLabel.x" [attr.y]="_chartProperties.upperYAxisLabel.y" [attr.transform]="_chartProperties.upperYAxisLabel.transform">100%</text>
+			<text text-anchor="middle" [attr.x]="_chartProperties.yAxisTitle.x" [attr.y]="_chartProperties.yAxisTitle.y" [attr.transform]="_chartProperties.yAxisTitle.transform">Likelihood</text>
+		</g>
+		<g stroke="#ccc" fill="none" >
+			<!-- <path [attr.d]="_chartProperties.potentialUpside.d"></path>
+			<path [attr.d]="_chartProperties.yAxisD"></path> -->
+		</g>
+	</g>
+</svg>
